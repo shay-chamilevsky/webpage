@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rogue King — Tactical Chess & Deck-Building Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/rogue-king.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="app-nav">
+      <div class="nav-wrapper">
+        <a
+          href="../index.html"
+          class="portfolio-back"
+          data-en="&larr; Back to Portfolio"
+          data-he="&rarr; חזרה לקורות החיים"
+          >&larr; Back to Portfolio</a
+        >
+        <div class="nav-brand">
+          <img src="../assets/images/rogue-king/icon.png" alt="ROGUE KING Logo" class="app-nav-logo" />
+          <span class="brand-title">ROGUE KING</span>
+        </div>
+        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
+      </div>
+    </header>
+
+    <!-- Prototype Warning / Scope Banner -->
+    <aside class="prototype-banner">
+      <div class="banner-content">
+        <span class="banner-icon">⚡</span>
+        <p
+          data-en="<strong>Concept Demo & Prototype:</strong> This project is a gameplay design exploration and interactive mechanic prototype, not a finished commercial game."
+          data-he="<strong>אב-טיפוס וקונספט דמו:</strong> פרויקט זה הינו הדגמת קונספט ומכניקות משחק (Prototype / Demo) בלבד, ואינו משחק מסחרי מלא."
+        >
+          <strong>Concept Demo & Prototype:</strong> This project is a gameplay
+          design exploration and interactive mechanic prototype, not a finished
+          commercial game.
+        </p>
+      </div>
+    </aside>
+
+    <!-- Game Hero -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <span
+            class="tagline-pill"
+            data-en="♟️ Tactical Chess • Deck-Building • JavaScript Engine"
+            data-he="♟️ שחמט טקטי • בניית חפיסות • מנוע JavaScript"
+            >♟️ Tactical Chess • Deck-Building • JavaScript Engine</span
+          >
+          <h1
+            class="hero-headline"
+            data-en="Classic Chess.<br><span class='highlight'>Rogue Mechanics.</span>"
+            data-he="שחמט קלאסי.<br><span class='highlight'>מכניקת Roguelike.</span>"
+          >
+            Classic Chess.<br /><span class="highlight">Rogue Mechanics.</span>
+          </h1>
+          <p
+            class="hero-sub"
+            data-en="A proof-of-concept fusing classic chess piece movements with rogue-lite deck-building, piece combat HP, and consumable action cards."
+            data-he="הדגמת קונספט ייחודית הממזגת תנועת כלי שחמט מסורתית עם בניית חפיסות קלפים, מדדי חיים (HP) לכלים וקלפי פעולה טקטיים."
+          >
+            A proof-of-concept fusing classic chess piece movements with
+            rogue-lite deck-building, piece combat HP, and consumable action
+            cards.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="#rules"
+              class="btn btn-king-primary"
+              data-en="Explore The Prototype Rules 📜"
+              data-he="חוקי הקונספט והדמו 📜"
+            >
+              Explore The Prototype Rules 📜
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-king-secondary"
+            >
+              <span class="btn-icon">🎨</span>
+              <div class="btn-label-group">
+                <span
+                  class="btn-small"
+                  data-en="Design Specs"
+                  data-he="מפרט עיצובי"
+                  >Design Specs</span
+                >
+                <span class="btn-main">View Repo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual Board Concept Showcase -->
+        <div class="board-frame-wrapper">
+          <div class="king-frame">
+            <img
+              src="../assets/images/rogue-king/screen-board.png"
+              alt="Rogue King Board Mockup"
+              class="board-display"
+              onerror="
+                this.src =
+                  'https://placehold.co/600x380/0e0717/c084fc?text=ROGUE+KING+DEMO+MOCKUP'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Rules & Mechanics -->
+    <section id="rules" class="rules-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="The Hybrid Core Rules"
+          data-he="חוקי הליבה של הקונספט"
+        >
+          The Hybrid Core Rules
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Three mechanical pillars that rethink traditional chess boundaries within the prototype scope:"
+          data-he="שלושה עקרונות מובילים שמגדירים מחדש את חוקי השחמט המסורתיים במסגרת הדמו:"
+        >
+          Three mechanical pillars that rethink traditional chess boundaries
+          within the prototype scope:
+        </p>
+
+        <div class="rules-grid">
+          <div class="rule-card">
+            <span class="rule-badge">Pillar 01</span>
+            <h4 data-en="Piece Combat & HP" data-he="מדדי חיים ולחימה (HP)">
+              Piece Combat & HP
+            </h4>
+            <p
+              data-en="Pieces no longer capture in a single hit. Each piece carries tailored HP and Attack points. Pawns skirmish; Queens act as high-damage battlefield bosses."
+              data-he="כלים אינם נלקחים במכה אחת. לכל כלי יש מדד חיים (HP) ועוצמת התקפה. רגלים סופגים מכות, בעוד מלכות מתפקדות כמפקדות קרב עתירות נזק."
+            >
+              Pieces no longer capture in a single hit. Each piece carries
+              tailored HP and Attack points. Pawns skirmish; Queens act as
+              high-damage battlefield bosses.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <span class="rule-badge">Pillar 02</span>
+            <h4
+              data-en="Deck-Building Action Cards"
+              data-he="קלפי פעולה טקטיים"
+            >
+              Deck-Building Action Cards
+            </h4>
+            <p
+              data-en="Draw cards every turn to temporarily alter board physics: grant a Knight diagonal bishop leaps, place barrier tiles, or trigger teleportation."
+              data-he="שליפת קלפים בכל תור שמשנים זמנית את חוקי המשחק: הענקת תנועת אלכסון לפרש, הצבת מכשולים על הלוח או טלפורטציה של כלי מאוים."
+            >
+              Draw cards every turn to temporarily alter board physics: grant a
+              Knight diagonal bishop leaps, place barrier tiles, or trigger
+              teleportation.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <span class="rule-badge">Pillar 03</span>
+            <h4
+              data-en="The Vulnerable Monarch"
+              data-he="המלך הפגיע (Rogue King)"
+            >
+              The Vulnerable Monarch
+            </h4>
+            <p
+              data-en="Checkmate is replaced with King execution. The King can wield special defensive spells but remains the ultimate objective for board wipe."
+              data-he="מט מסורתי מוחלף בחיסול מדד החיים של המלך. המלך מחזיק ביכולות קסם הגנתיות, אך פגיעה ישירה בו מכריעה את הקרב מיידית."
+            >
+              Checkmate is replaced with King execution. The King can wield
+              special defensive spells but remains the ultimate objective for
+              board wipe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Game Screens & Interactive Systems -->
+    <section class="screens-showcase-section" style="background: var(--king-bg); border-top: 1px solid var(--king-border);">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Playable Screens & Systems"
+          data-he="מסכי המשחק ומערכות קרב"
+        >
+          Playable Screens & Systems
+        </h2>
+        <p
+          class="section-sub"
+          data-en="High-fidelity interactive states captured directly from the JavaScript & HTML5 game engine:"
+          data-he="מסכי משחק אמיתיים שנלכדו ישירות מתוך מנוע המשחק ב-JavaScript ו-HTML5:"
+        >
+          High-fidelity interactive states captured directly from the JavaScript & HTML5 game engine:
+        </p>
+
+        <div class="screens-carousel-wrapper">
+          <button
+            class="carousel-nav-btn prev"
+            id="carousel-prev"
+            aria-label="Previous screen"
+          >
+            &larr;
+          </button>
+          <div class="screens-carousel-viewport">
+            <div class="screens-carousel-track" id="carousel-track">
+          <!-- Screen 1: Title Screen & Menu -->
+          <article class="screen-card">
+            <div class="screen-img-box">
+              <img
+                src="../assets/images/rogue-king/screen-menu.png"
+                alt="Rogue King Title & Main Menu"
+                onerror="this.src='https://placehold.co/600x380/0e0717/c084fc?text=Main+Menu'"
+              />
+            </div>
+            <div class="screen-card-content">
+              <span class="screen-subtitle" data-en="Main Menu & Navigation" data-he="תפריט ראשי וניווט">Main Menu & Navigation</span>
+              <h4 data-en="1. Gothic Title & Campaign Hub" data-he="1. תפריט פתיחה ומצבי משחק">1. Gothic Title & Campaign Hub</h4>
+              <p
+                data-en="Gothic title hub providing seamless access to the Story Campaign, Quick Skirmish mode, and the custom Deck Builder interface."
+                data-he="תפריט פתיחה בסגנון גותי המאפשר מעבר מהיר למסע העלילתי (Story), קרב מהיר (Quick Game) וממשק בניית החפיסה."
+              >
+                Gothic title hub providing seamless access to the Story Campaign, Quick Skirmish mode, and the custom Deck Builder interface.
+              </p>
+            </div>
+          </article>
+
+          <!-- Screen 2: The Tactical Board -->
+          <article class="screen-card">
+            <div class="screen-img-box">
+              <img
+                src="../assets/images/rogue-king/screen-board.png"
+                alt="Tactical Chessboard View"
+                onerror="this.src='https://placehold.co/600x380/0e0717/c084fc?text=Board+State'"
+              />
+            </div>
+            <div class="screen-card-content">
+              <span class="screen-subtitle" data-en="Tactical Playfield" data-he="זירת הקרב">Tactical Playfield</span>
+              <h4 data-en="2. 8x8 Chessboard Arena" data-he="2. זירת שחמט טקטית 8x8">2. 8x8 Chessboard Arena</h4>
+              <p
+                data-en="Full chess board featuring real-time piece HP bars, live hand of action cards, discard piles, and an active piece inspector panel."
+                data-he="לוח שחמט מלא המציג מדדי חיים (HP) מעל כל כלי, קלפי פעולה זמינים ביד השחקן ופאנל פירוט לכלי הפעיל."
+              >
+                Full chess board featuring real-time piece HP bars, live hand of action cards, discard piles, and an active piece inspector panel.
+              </p>
+            </div>
+          </article>
+
+          <!-- Screen 3: Duel Combat Overlay -->
+          <article class="screen-card">
+            <div class="screen-img-box">
+              <img
+                src="../assets/images/rogue-king/screen-duel.png"
+                alt="Piece HP Duel Overlay"
+                onerror="this.src='https://placehold.co/600x380/0e0717/e879f9?text=Duel+Window'"
+              />
+            </div>
+            <div class="screen-card-content">
+              <span class="screen-subtitle" data-en="Combat Clashes" data-he="מערכת קרבות ישירה">Combat Clashes</span>
+              <h4 data-en="3. Piece HP Duel Overlay" data-he="3. חלון דו-קרב ו-HP לכלים">3. Piece HP Duel Overlay</h4>
+              <p
+                data-en="Direct clash interface initiating when pieces engage. Displays character portraits, comparative attack/defense stats, and action commands."
+                data-he="ממשק קרב ייעודי הנפתח בהתנגשות בין כלים, המציג פורטרטים, חישובי נזק, מדדי חיים (HP) ואפשרויות תקיפה או ויתור תור."
+              >
+                Direct clash interface initiating when pieces engage. Displays character portraits, comparative attack/defense stats, and action commands.
+              </p>
+            </div>
+          </article>
+
+          <!-- Screen 4: Rune Deck Builder -->
+          <article class="screen-card">
+            <div class="screen-img-box">
+              <img
+                src="../assets/images/rogue-king/screen-deck.png"
+                alt="Deck Builder Screen"
+                onerror="this.src='https://placehold.co/600x380/0e0717/fbbf24?text=Deck+Builder'"
+              />
+            </div>
+            <div class="screen-card-content">
+              <span class="screen-subtitle" data-en="Strategic Drafting" data-he="בניית חפיסה ואסטרטגיה">Strategic Drafting</span>
+              <h4 data-en="4. Dark Magic Card Library" data-he="4. ספריית קלפי קסם ובניית חפיסה">4. Dark Magic Card Library</h4>
+              <p
+                data-en="Card drafting and selection interface where players formulate synergy-focused 20-card tactical decks from dark magic disciplines."
+                data-he="ממשק ניהול ובחירת קלפים המאפשר לשחקן לעצב חפיסה סינרגטית של 20 קלפים מתוך מאגר קסמים אפלים ויכולות טקטיות."
+              >
+                Card drafting and selection interface where players formulate synergy-focused 20-card tactical decks from dark magic disciplines.
+              </p>
+            </div>
+          </article>
+
+          <!-- Screen 5: Story & World Lore -->
+          <article class="screen-card">
+            <div class="screen-img-box">
+              <img
+                src="../assets/images/rogue-king/screen-story.png"
+                alt="Lore of the Rouge King"
+                onerror="this.src='https://placehold.co/600x380/0e0717/a855f7?text=Story+Lore'"
+              />
+            </div>
+            <div class="screen-card-content">
+              <span class="screen-subtitle" data-en="Narrative Lore" data-he="עלילה ורקע">Narrative Lore</span>
+              <h4 data-en="5. Story & World Lore" data-he="5. עלילת המשחק ומסע המלך">5. Story & World Lore</h4>
+              <p
+                data-en="Gothic narrative modal detailing the centuries-old lore of the Rouge Arena, forbidden blood magic, and the war against the Ebon Legion."
+                data-he="חלון עלילתי בסגנון גותי המפרט את ההיסטוריה של זירת Rouge, קסמי הדם האסורים והמאבק נגד לגיונות ה-Ebon Legion."
+              >
+                Gothic narrative modal detailing the centuries-old lore of the Rouge Arena, forbidden blood magic, and the war against the Ebon Legion.
+              </p>
+            </div>
+          </article>
+
+          <!-- Screen 6: Victory & Match Resolution -->
+          <article class="screen-card">
+            <div class="screen-img-box">
+              <img
+                src="../assets/images/rogue-king/screen-gameover.png"
+                alt="Victory Screen"
+                onerror="this.src='https://placehold.co/600x380/0e0717/10b981?text=Victory+Screen'"
+              />
+            </div>
+            <div class="screen-card-content">
+              <span class="screen-subtitle" data-en="Match Resolution" data-he="סיום קרב והכרעה">Match Resolution</span>
+              <h4 data-en="6. Victory & King Execution" data-he="6. הכרעת הניצחון וסיום קרב">6. Victory & King Execution</h4>
+              <p
+                data-en="End-game resolution sequence triggered when the enemy commander is slain, rewarding players with tactical victory."
+                data-he="מסך סיום והכרעה המופעל בעת חיסול מפקד האויב בלוח, המעניק לשחקן ניצחון מוחץ והכרעת הקרב."
+              >
+                End-game resolution sequence triggered when the enemy commander is slain, rewarding players with tactical victory.
+              </p>
+            </div>
+          </article>
+            </div>
+          </div>
+          <button
+            class="carousel-nav-btn next"
+            id="carousel-next"
+            aria-label="Next screen"
+          >
+            &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cards & UI Mockup Showcase -->
+    <section class="cards-showcase-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Card Design & UI Wireframes"
+          data-he="אפיון הקלפים וממשק המשתמש"
+        >
+          Card Design & UI Wireframes
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Visual wireframes and sample cards formulated for the proof-of-concept:"
+          data-he="מוקאפים וכרטיסי יכולת שאופיינו עבור האב-טיפוס:"
+        >
+          Visual wireframes and sample cards formulated for the
+          proof-of-concept:
+        </p>
+
+        <div class="cards-grid">
+          <div class="card-item">
+            <div class="card-preview">
+              <img
+                src="../assets/images/rogue-king/card-knight.png"
+                alt="Sacred Chalice Heal Card"
+                onerror="
+                  this.src =
+                    'https://placehold.co/280x360/1a0e2e/c084fc?text=Card:+Heal'
+                "
+              />
+            </div>
+            <h4 data-en="Sacred Chalice Heal" data-he="גביע הריפוי הקדוש">Sacred Chalice Heal</h4>
+            <span class="card-type" data-en="Restoration Spell" data-he="לחש ריפוי והתחדשות">Restoration Spell</span>
+            <p
+              data-en="Restores 2 HP to an injured friendly piece on the board, saving valuable officers from fatal strikes."
+              data-he="מרפא 2 נקודות חיים (HP) לכלי פגוע על הלוח, ומציל קצינים חיוניים מפגיעה קטלנית."
+            >
+              Restores 2 HP to an injured friendly piece on the board, saving valuable officers from fatal strikes.
+            </p>
+          </div>
+
+          <div class="card-item">
+            <div class="card-preview">
+              <img
+                src="../assets/images/rogue-king/card-shield.png"
+                alt="Vampirism & Counterspell Runes"
+                onerror="
+                  this.src =
+                    'https://placehold.co/280x360/1a0e2e/e879f9?text=Card:+Vampirism'
+                "
+              />
+            </div>
+            <h4 data-en="Vampirism & Counterspell" data-he="ערפדות וביטול לחשים">Vampirism & Counterspell</h4>
+            <span class="card-type" data-en="Tactical Runes" data-he="רונות טקטיות">Tactical Runes</span>
+            <p
+              data-en="High-tier dark magic spells enabling life drain on attacks or instantaneous cancellation of hostile enemy plays."
+              data-he="לחשי קסם אפל מתקדמים המאפשרים שאיבת חיים בעת תקיפה או ביטול מיידי של קלפי אויב."
+            >
+              High-tier dark magic spells enabling life drain on attacks or instantaneous cancellation of hostile enemy plays.
+            </p>
+          </div>
+
+          <div class="card-item">
+            <div class="card-preview">
+              <img
+                src="../assets/images/rogue-king/card-strike.png"
+                alt="Battle Log & Combat HUD Wireframe"
+                onerror="
+                  this.src =
+                    'https://placehold.co/280x360/1a0e2e/fbbf24?text=UI+Wireframe'
+                "
+              />
+            </div>
+            <h4 data-en="Battle Log & Combat HUD" data-he="ממשק קרב ויומן פעולות">Battle Log & Combat HUD</h4>
+            <span class="card-type" data-en="Interface Prototype" data-he="אב-טיפוס ממשק">Interface Prototype</span>
+            <p
+              data-en="Early visual wireframe mapping out the AI/Player draw piles, active rune display, and battle log tracking."
+              data-he="אפיון ממשק מוקדם הממפה את ערימות השליפה של השחקן וה-AI, חלון הרונה הפעילה ויומן מהלכי הקרב."
+            >
+              Early visual wireframe mapping out the AI/Player draw piles, active rune display, and battle log tracking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scope & Product Spec -->
+    <section class="tech-specs-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Design Scope & Documentation"
+          data-he="היקף הפרויקט ומפרט מוצרי"
+        >
+          Design Scope & Documentation
+        </h2>
+        <div class="specs-table">
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Project State"
+              data-he="סטטוס הפרויקט"
+              >Project State</span
+            >
+            <span
+              class="spec-val status-badge"
+              data-en="Interactive Concept Prototype / Demo"
+              data-he="קונספט ואב-טיפוס (Demo)"
+              >Interactive Concept Prototype / Demo</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Deliverables"
+              data-he="תוצרי הפרויקט"
+              >Deliverables</span
+            >
+            <span
+              class="spec-val"
+              data-en="Game design document (GDD), card balance spreadsheets, and UI wireframe screens"
+              data-he="מסמך אפיון משחק (GDD), טבלאות איזון קלפים ומוקאפים גרפיים"
+              >Game design document (GDD), card balance spreadsheets, and UI
+              wireframe screens</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Implementation Stack"
+              data-he="טכנולוגיית מימוש"
+              >Implementation Stack</span
+            >
+            <span
+              class="spec-val"
+              data-en="JavaScript (Vanilla ES6+), HTML5 Canvas / DOM, CSS3 Custom Properties"
+              data-he="JavaScript (Vanilla ES6+), קנבס ו-DOM ב-HTML5, ו-CSS3"
+              >JavaScript (Vanilla ES6+), HTML5 Canvas / DOM, CSS3 Custom Properties</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Core Inspiration"
+              data-he="השראה מרכזית"
+              >Core Inspiration</span
+            >
+            <span class="spec-val"
+              >Classical Chess x Slay the Spire / Shotgun King mechanics</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="content-wrapper">
+        <p
+          data-en="Rogue King • Game Design Exploration & Concept Prototype"
+          data-he="Rogue King • אפיון קונספט ואב-טיפוס למשחק"
+        >
+          Rogue King • Game Design Exploration & Concept Prototype
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bilingual Switcher & Screens Carousel Script -->
+    <script>
+      // 1. Always open at the top
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+
+      const track = document.getElementById("carousel-track");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const toggleBtn = document.getElementById("lang-toggle");
+      const cards = track ? track.querySelectorAll(".screen-card") : [];
+
+      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, cards.length - getVisibleCount());
+      }
+
+      function updateCarousel() {
+        if (!track || !cards.length) return;
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const isRtl = document.documentElement.dir === "rtl";
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.gap) || 24;
+        const step = cardWidth + gap;
+
+        const shift = isRtl ? (currentIndex * step) : (-currentIndex * step);
+        track.style.transform = `translateX(${shift}px)`;
+      }
+
+      function moveLeft() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        } else {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        }
+        updateCarousel();
+      }
+
+      function moveRight() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        } else {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        }
+        updateCarousel();
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", moveLeft);
+      if (nextBtn) nextBtn.addEventListener("click", moveRight);
+
+      window.addEventListener("resize", () => {
+        updateCarousel();
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("site_lang", lang);
+        const isHebrew = lang === "he";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
+        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+
+        // Keep physical left arrow pointing left (←), physical right arrow pointing right (→)
+        if (prevBtn) prevBtn.innerHTML = "&larr;";
+        if (nextBtn) nextBtn.innerHTML = "&rarr;";
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
+          if (text) el.innerHTML = text;
+        });
+
+        currentIndex = 0;
+        updateCarousel();
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          setLanguage(currentLang === "en" ? "he" : "en");
+        });
+      }
+
+      setLanguage(currentLang);
+    </script>
+  </body>
+</html>

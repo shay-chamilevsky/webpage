@@ -1,0 +1,660 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TICK — Intentional Habit & Routine Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tick.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="app-nav">
+      <div class="nav-wrapper">
+        <a
+          href="../index.html"
+          class="portfolio-back"
+          data-en="&larr; Back to Portfolio"
+          data-he="&rarr; חזרה לקורות החיים"
+          >&larr; Back to Portfolio</a
+        >
+        <div class="nav-brand">
+          <img src="../assets/images/tick/icon.png" alt="TICK Logo" class="app-nav-logo" />
+          <span class="brand-name">TICK</span>
+        </div>
+        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
+      </div>
+    </header>
+
+    <!-- ==========================================
+     1. HERO SECTION (Marketing Hero)
+     ========================================== -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <span
+            class="tagline-pill"
+            data-en="⚡ Neo-Brutalist Habit Architecture"
+            data-he="⚡ ארכיטקטורת הרגלים נאו-ברוטליסטית"
+            >⚡ Neo-Brutalist Habit Architecture</span
+          >
+          <h1
+            class="hero-headline"
+            data-en="Build Habits.<br><span class='highlight'>Break Limits. Zero BS.</span>"
+            data-he="בניית הרגלים.<br><span class='highlight'>גמילה מוחלטת. אפס מריחות.</span>"
+          >
+            Build Habits.<br /><span class="highlight"
+              >Break Limits. Zero BS.</span
+            >
+          </h1>
+          <p
+            class="hero-sub"
+            data-en="TICK strips habit tracking to its raw, tactile core. Engineered with bold neo-brutalist aesthetics, zero-latency logging gestures, continuous streaks, and decoupled weekly evaluation for habit reduction."
+            data-he="TICK מפשיטה את מעקב ההרגלים לליבה החדה והמהירה שלו. בנויה בשפה נאו-ברוטליסטית בועטת, מחוות סימון באפס השהיה, רצפי ימים רציפים ולוגיקה שבועית מופרדת לגמילה והפחתת הרגלים."
+          >
+            TICK strips habit tracking to its raw, tactile core. Engineered with
+            bold neo-brutalist aesthetics, zero-latency logging gestures,
+            continuous streaks, and decoupled weekly evaluation for habit
+            reduction.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="https://expo.dev"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-expo"
+            >
+              <span class="btn-icon">▲</span>
+              <div class="btn-label-group">
+                <span
+                  class="btn-small"
+                  data-en="Live Preview"
+                  data-he="התנסות חיה"
+                  >Live Preview</span
+                >
+                <span class="btn-main">Expo Go</span>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-github"
+            >
+              <span class="btn-icon">📦</span>
+              <div class="btn-label-group">
+                <span class="btn-small" data-en="Source Code" data-he="קוד מקור"
+                  >Source Code</span
+                >
+                <span class="btn-main">GitHub Repo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-phone-wrapper">
+          <div class="phone-frame">
+            <img
+              src="../assets/images/tick/screen-today.png"
+              alt="TICK Main Dashboard"
+              class="phone-screen"
+              onerror="
+                this.src =
+                  'https://placehold.co/360x780/fffbf0/121212?text=TICK+Dashboard'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     2. THE STORY & CHALLENGE (3 Cards)
+     ========================================== -->
+    <section class="story-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="The Product Philosophy"
+          data-he="תובנות מחקר ופילוסופיית מוצר"
+        >
+          The Product Philosophy
+        </h2>
+        <div class="story-cards">
+          <div class="story-card">
+            <span
+              class="story-badge badge-coral"
+              data-en="The Challenge"
+              data-he="האתגר שזיהינו"
+              >The Challenge</span
+            >
+            <h3
+              data-en="The Guilt Trap & Reduction Flaw"
+              data-he="מלכודת האשמה וכשל ההפחתה"
+            >
+              The Guilt Trap & Reduction Flaw
+            </h3>
+            <p
+              data-en="Traditional trackers assume all habits are additive. When users attempt reduction (e.g. smoking or caffeine), mid-week 'success' alerts create false accomplishments before the cycle ends, while broken streaks induce punishing guilt spirals that drive app abandonment."
+              data-he="אפליקציות מסורתיות מניחות שכל הרגל הוא חיובי ומצטבר. במעקבי הפחתה וגמילה (כמו סיגריות או סוכר), התראות הצלחה מוקדמות באמצע השבוע מייצרות הישג מזויף, בעוד ענישה על שבירת רצף גורמת למעגל אשמה שמוביל לנטישת האפליקציה."
+            >
+              Traditional trackers assume all habits are additive. When users
+              attempt reduction (e.g. smoking or caffeine), mid-week 'success'
+              alerts create false accomplishments before the cycle ends, while
+              broken streaks induce punishing guilt spirals that drive app
+              abandonment.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge badge-lime"
+              data-en="Product Solution"
+              data-he="הפתרון המוצרי"
+              >Product Solution</span
+            >
+            <h3
+              data-en="Decoupled Retrospective Logic"
+              data-he="הפרדה לוגית והערכה רטרוספקטיבית"
+            >
+              Decoupled Retrospective Logic
+            </h3>
+            <p
+              data-en="TICK decouples accumulation from boundary control. For reduction targets ('at most'), mid-week alerts are suppressed until Sunday's retrospective review, while positive days safely protect momentum without punishing negative scoring."
+              data-he="TICK מפצלת את לוגיקת המעקב לחלוטין: בהרגלי הפחתה ('לכל היותר'), כל התראות ההצלחה מושהות עד לסיכום הרטרוספקטיבי של יום ראשון, ושמירה על הגבול מחזקת את הרצף מבלי לצבור ציונים שליליים מענישים."
+            >
+              TICK decouples accumulation from boundary control. For reduction
+              targets ('at most'), mid-week alerts are suppressed until Sunday's
+              retrospective review, while positive days safely protect momentum
+              without punishing negative scoring.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge badge-purple"
+              data-en="Core Differentiator"
+              data-he="הערך המרכזי"
+              >Core Differentiator</span
+            >
+            <h3
+              data-en="Raw Utility Over Dark Patterns"
+              data-he="שימושיות חדה ללא הסחות דעת"
+            >
+              Raw Utility Over Dark Patterns
+            </h3>
+            <p
+              data-en="No fluff, no bloated gamification badges. TICK pairs high-contrast neo-brutalist tactile cards with real-time quick swipes, persistent 10-day history dots, and strict color-coded accountability (Green for success, Red for boundaries broken)."
+              data-he="אפס גימיקים ואפס אלמנטים מיותרים. TICK משלבת כרטיסיות נאו-ברוטליסטיות בעלות שטח מגע מובהק, מחוות החלקה מהירות, תצוגת 10 ימים היסטוריים ומערכת צבעים חדה ועקבית (ירוק להצלחה, אדום לחריגה מהיעד)."
+            >
+              No fluff, no bloated gamification badges. TICK pairs high-contrast
+              neo-brutalist tactile cards with real-time quick swipes,
+              persistent 10-day history dots, and strict color-coded
+              accountability (Green for success, Red for boundaries broken).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     3. SCREENS TOUR & CAROUSEL (4 Screens)
+     ========================================== -->
+    <section class="screens-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Interface & Core Mechanics"
+          data-he="סיור מסכים ומכניקות ליבה"
+        >
+          Interface & Core Mechanics
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Engineered for 60 FPS feedback, tactical clarity, and zero cognitive load:"
+          data-he="הנדסת ממשק של 60 פריימים לשנייה, קריאות מקסימלית ואפס עומס קוגניטיבי:"
+        >
+          Engineered for 60 FPS feedback, tactical clarity, and zero cognitive
+          load:
+        </p>
+
+        <!-- 4 Items -> Carousel Container with Infinite Loop -->
+        <div class="carousel-container">
+          <button
+            class="carousel-nav-btn prev-btn"
+            id="carousel-prev"
+            aria-label="Previous Screen"
+          >
+            &larr;
+          </button>
+
+          <div class="carousel-track-wrapper">
+            <div class="carousel-track" id="carousel-track">
+              <!-- Screen 1 -->
+              <div class="carousel-slide">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/tick/screen-today.png"
+                    alt="Tactile Dashboard"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/300x650/fffbf0/121212?text=Dashboard+View'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="1. Tactical Dashboard"
+                  data-he="1. דשבורד ברוטליסטי מרכזי"
+                >
+                  1. Tactical Dashboard
+                </h4>
+                <p
+                  data-en="High-density neo-brutalist cards featuring real-time streak badges, freeze protection states, and instant 10-day status dot history."
+                  data-he="כרטיסיות נאו-ברוטליסטיות המציגות רצפי ימים פעילים, מצבי הקפאה מוגנים והיסטוריית מעקב של 10 ימים בנקודות סטטוס מהירות."
+                >
+                  High-density neo-brutalist cards featuring real-time streak
+                  badges, freeze protection states, and instant 10-day status
+                  dot history.
+                </p>
+              </div>
+
+              <!-- Screen 2 -->
+              <div class="carousel-slide">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/tick/screen-reduction.png"
+                    alt="Reduction & Boundary Flow"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/300x650/fee2e2/121212?text=Reduction+Flow'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="2. Habit & Reduction Creation Flow"
+                  data-he="2. יצירת הרגל ומודל גמילה והפחתה"
+                >
+                  2. Habit & Reduction Creation Flow
+                </h4>
+                <p
+                  data-en="Creation modal supporting dual workflows: building positive habits or enforcing reduction limits ('Quit or Reduce Habit') with target frequency controls."
+                  data-he="מודל יצירה תומך בשני מסלולים: בניית הרגל חיובי או הגדרת יעדי הפחתה וגמילה ('הפחת הרגל') עם שליטה מלאה בימי היעד ויחידות המדידה."
+                >
+                  Creation modal supporting dual workflows: building positive
+                  habits or enforcing reduction limits ('Quit or Reduce Habit')
+                  with target frequency controls.
+                </p>
+              </div>
+
+              <!-- Screen 3 -->
+              <div class="carousel-slide">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/tick/screen-stats.png"
+                    alt="Habit Detail & Consistency Calendar"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/300x650/064e3b/ffffff?text=Calendar+Grid'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="3. Habit Analytics & 28-Day Calendar"
+                  data-he="3. ניתוח הרגל ולוח עקביות"
+                >
+                  3. Habit Analytics & 28-Day Calendar
+                </h4>
+                <p
+                  data-en="Comprehensive habit detail view displaying active streaks (28 days), all-time bests, total reps (1,450), 88% completion rate, and full interactive month calendar."
+                  data-he="מסך פירוט הרגל המציג רצף פעיל (28 ימים), שיא כל הזמנים, סך חזרות כולל (1,450), 88% עמידה ביעד ולוח שנה חודשי אינטראקטיבי עם סימוני הצלחה/פספוס."
+                >
+                  Comprehensive habit detail view displaying active streaks (28 days),
+                  all-time bests, total reps (1,450), 88% completion rate, and
+                  full interactive month calendar.
+                </p>
+              </div>
+
+              <!-- Screen 4 -->
+              <div class="carousel-slide">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/tick/WhatsApp Image 2026-10-30 at 13.23.59.jpeg"
+                    alt="Sidebar & Bi-Directional Controls"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/300x650/fde047/121212?text=Sidebar+Controls'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="4. Quick Navigation & RTL/LTR"
+                  data-he="4. תפריט שליטה וניווט דו-לשוני"
+                >
+                  4. Quick Navigation & RTL/LTR
+                </h4>
+                <p
+                  data-en="Tactile slide-out drawer providing rapid habit selection, tri-state theme toggling (Light/Dark/System), and native RTL/LTR mirroring."
+                  data-he="תפריט צד נשלף למעבר מהיר בין הרגלים, בורר ערכות נושא תלת-מצבי (יום/לילה/מערכת) והיפוך כיווניות מלא לעברית ואנגלית."
+                >
+                  Tactile slide-out drawer providing rapid habit selection,
+                  tri-state theme toggling (Light/Dark/System), and native
+                  RTL/LTR mirroring.
+                </p>
+              </div>
+
+              <!-- Screen 5 -->
+              <div class="carousel-slide">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/tick/screen-achivment.jpg"
+                    alt="Goal Completion Splash"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/300x650/facc15/121212?text=Goal+Achieved'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="5. Tactile Goal Celebration"
+                  data-he="5. חגיגת יעד וסיום משימה"
+                >
+                  5. Tactile Goal Celebration
+                </h4>
+                <p
+                  data-en="Bold neo-brutalist celebration splash triggered on goal completion, delivering high-satisfaction visual checkmark and synchronized haptic confirmation."
+                  data-he="מסך חגיגת הצלחה ברוטליסטי המופעל בעת השלמת יעד יומי, עם ויזואליה חדה, סימון וי צהוב בולט ורטט פידבק עשיר."
+                >
+                  Bold neo-brutalist celebration splash triggered on goal completion,
+                  delivering high-satisfaction visual checkmark and synchronized haptic confirmation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-nav-btn next-btn"
+            id="carousel-next"
+            aria-label="Next Screen"
+          >
+            &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     4. DEEP DIVE & KEY DECISIONS (3 Cards)
+     ========================================== -->
+    <section class="story-section" style="background: var(--nb-bg)">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Deep Dives & Engineering Battles"
+          data-he="החלטות עומק ופתרון בעיות הנדסיות"
+        >
+          Deep Dives & Engineering Battles
+        </h2>
+        <div class="story-cards">
+          <div class="story-card">
+            <span
+              class="story-badge badge-coral"
+              data-en="Platform Parity"
+              data-he="עקביות חוצת פלטפורמות"
+              >Platform Parity</span
+            >
+            <h3
+              data-en="Mobile Hard Shadow Architecture"
+              data-he="ארכיטקטורת צללים קשיחים בנייד"
+            >
+              Mobile Hard Shadow Architecture
+            </h3>
+            <p
+              data-en="Standard React Native shadow props collapsed into blurry elevation or flat borders on Android. We built a custom layered component (`BrutalistContainer`) using absolute-positioned background views with hard offsets, ensuring pixel-perfect neo-brutalist shadows on both iOS and Android."
+              data-he="מאפייני הצל של React Native הפכו באנדרואיד לטשטוש או למסגרת שטוחה. פיתחנו קומפוננטת שכבות ייעודית (`BrutalistContainer`) הממקמת שכבה שחורה קשיחה בהיסט מוחלט (Absolute Layering), ומבטיחה מראה ברוטליסטי זהה ומדויק בכל מכשיר."
+            >
+              Standard React Native shadow props collapsed into blurry elevation
+              or flat borders on Android. We built a custom layered component
+              (`BrutalistContainer`) using absolute-positioned background views
+              with hard offsets, ensuring pixel-perfect neo-brutalist shadows on
+              both iOS and Android.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge badge-lime"
+              data-en="UX Architecture"
+              data-he="ארכיטקטורת ממשק"
+              >UX Architecture</span
+            >
+            <h3
+              data-en="Killing Gesture Clutter for Native Scroll"
+              data-he="ויתור על מחוות לטובת ביצועי גלילה"
+            >
+              Killing Gesture Clutter for Native Scroll
+            </h3>
+            <p
+              data-en="Custom PanResponder drag-to-close modal gestures clashed with scroll views and caused keyboard occlusion bugs on physical devices. We scrapped the complex drag gestures in favor of a native ScrollView combined with an explicit, high-contrast 'X' button, restoring instant responsiveness."
+              data-he="מחוות החלקה מותאמות לסגירת חלונות (`PanResponder`) התנגשו במנגנון הגלילה וחסמו שדות קלט מול המקלדת באנדרואיד. ביטלנו את מחוות הגרירה לטובת מעטפת ScrollView מקורית וכפתור X בולט וברור, שהחזירו מהירות וביצועים ללא פשרות."
+            >
+              Custom PanResponder drag-to-close modal gestures clashed with
+              scroll views and caused keyboard occlusion bugs on physical
+              devices. We scrapped the complex drag gestures in favor of a
+              native ScrollView combined with an explicit, high-contrast 'X'
+              button, restoring instant responsiveness.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge badge-purple"
+              data-en="Behavioral Logic"
+              data-he="לוגיקה התנהגותית"
+              >Behavioral Logic</span
+            >
+            <h3
+              data-en="Mental Model Color Alignment"
+              data-he="יישור צבעים למודל המנטלי של המשתמש"
+            >
+              Mental Model Color Alignment
+            </h3>
+            <p
+              data-en="Usability audits revealed auxiliary purple failure indicators confused users. We strictly purged purple in favor of a unified semantic scheme: Green for achievement, solid Red for bad days/limits exceeded, and dedicated Freeze Blue (#3B82F6) to represent protected streaks across all themes."
+              data-he="בדיקות שמישות הראו שסימוני כישלון בסגול בלבלו את המשתמשים. ביצענו האחדת צבעים גורפת: ירוק להצלחה, אדום מובהק לחריגות וימים רעים, וכחול הקפאה ייעודי (#3B82F6) להגנה על הרצף באופן עקבי בכל מצבי התצוגה."
+            >
+              Usability audits revealed auxiliary purple failure indicators
+              confused users. We strictly purged purple in favor of a unified
+              semantic scheme: Green for achievement, solid Red for bad
+              days/limits exceeded, and dedicated Freeze Blue (#3B82F6) to
+              represent protected streaks across all themes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+     5. TECH SPECS TABLE (4 Rows)
+     ========================================== -->
+    <section class="tech-specs-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Technical Specifications"
+          data-he="מפרט טכנולוגי וארכיטקטורה"
+        >
+          Technical Specifications
+        </h2>
+        <div class="specs-table">
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Framework & Core"
+              data-he="סביבה וטכנולוגיית ליבה"
+              >Framework & Core</span
+            >
+            <span class="spec-val">React Native • Expo SDK • TypeScript</span>
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Design Engine"
+              data-he="מנוע עיצוב ושפה גרפית"
+              >Design Engine</span
+            >
+            <span class="spec-val"
+              >Custom Absolute-Layer Neo-Brutalist Architecture (No External UI
+              Kits)</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="State & Persistence"
+              data-he="ניהול נתונים ושמירה מקומית"
+              >State & Persistence</span
+            >
+            <span class="spec-val"
+              >React Hooks • AsyncStorage Local Serialization • Zero Cloud
+              Dependency</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Internationalization"
+              data-he="תמיכה בינלאומית"
+              >Internationalization</span
+            >
+            <span class="spec-val"
+              >Full RTL / LTR Bi-Directional Layout Dynamic Flipping (Hebrew &
+              English)</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="content-wrapper">
+        <p
+          data-en="TICK • Intentional Productivity & Habit Design"
+          data-he="TICK • אפיון מוצר ועיצוב הרגלים בריאים"
+        >
+          TICK • Intentional Productivity & Habit Design
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // 1. Always open at the top
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+
+      const track = document.getElementById("carousel-track");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const toggleBtn = document.getElementById("lang-toggle");
+      const slides = track ? track.querySelectorAll(".carousel-slide") : [];
+
+      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, slides.length - getVisibleCount());
+      }
+
+      function updateCarousel() {
+        if (!track || !slides.length) return;
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const isRtl = document.documentElement.dir === "rtl";
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const shift = isRtl ? (currentIndex * slideWidth) : (-currentIndex * slideWidth);
+        track.style.transform = `translateX(${shift}px)`;
+      }
+
+      function moveLeft() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        } else {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        }
+        updateCarousel();
+      }
+
+      function moveRight() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        } else {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        }
+        updateCarousel();
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", moveLeft);
+      if (nextBtn) nextBtn.addEventListener("click", moveRight);
+
+      window.addEventListener("resize", () => {
+        updateCarousel();
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("site_lang", lang);
+        const isHebrew = lang === "he";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
+        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+
+        // Keep physical left arrow pointing left (←), physical right arrow pointing right (→)
+        if (prevBtn) prevBtn.innerHTML = "&larr;";
+        if (nextBtn) nextBtn.innerHTML = "&rarr;";
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
+          if (text) el.innerHTML = text;
+        });
+
+        currentIndex = 0;
+        updateCarousel();
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          setLanguage(currentLang === "en" ? "he" : "en");
+        });
+      }
+
+      setLanguage(currentLang);
+    </script>
+  </body>
+</html>

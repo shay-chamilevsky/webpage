@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Breach — Retro Mobile Arcade Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700;800&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/system-breach.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="app-nav">
+      <div class="nav-wrapper">
+        <a
+          href="../index.html"
+          class="portfolio-back"
+          data-en="&larr; Back to Portfolio"
+          data-he="&rarr; חזרה לקורות החיים"
+          >&larr; Back to Portfolio</a
+        >
+        <div class="nav-brand">
+          <img src="../assets/images/system-breach/icon.png" alt="SYSTEM_BREACH Logo" class="app-nav-logo" />
+          <span class="brand-title">SYSTEM_BREACH</span>
+        </div>
+        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
+      </div>
+    </header>
+
+    <!-- Arcade Hero (Phone Chassis Restored) -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <span
+            class="tagline-pill"
+            data-en="🕹️ Sci-Fi Retro Mobile Arcade"
+            data-he="🕹️ ארקייד סייבר-רטרו למובייל"
+            >🕹️ Sci-Fi Retro Mobile Arcade</span
+          >
+          <h1
+            class="hero-headline"
+            data-en="High School Classics.<br><span class='highlight'>Breached & Re-Engineered.</span>"
+            data-he="משחקי התיכון הנוסטלגיים.<br><span class='highlight'>בגרסת הישרדות עתידנית.</span>"
+          >
+            High School Classics.<br /><span class="highlight"
+              >Breached & Re-Engineered.</span
+            >
+          </h1>
+          <p
+            class="hero-sub"
+            data-en="A sci-fi multi-game universe powered by React Native and Expo SDK 56. Six nostalgic desk-break favorites unified under a ship telemetry campaign—combining real-time physics, tactile haptics, and passive decay state hydration."
+            data-he="יקום רב-משחקי מד״בי ב-React Native ו-Expo SDK 56. ששת משחקי הנוסטלגיה של שולחן התיכון תחת נרטיב של מערכות ספינה חלליות—עם פיזיקה בזמן אמת, מחוות מגע הפטיות ומנגנון שחיקת מערכות מתמשך."
+          >
+            A sci-fi multi-game universe powered by React Native and Expo SDK
+            56. Six nostalgic desk-break favorites unified under a ship
+            telemetry campaign—combining real-time physics, tactile haptics, and
+            passive decay state hydration.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="#carousel"
+              class="btn btn-arcade-play"
+              data-en="Inspect Protocols ▶"
+              data-he="סקור פרוטוקולים ▶"
+            >
+              Inspect Protocols ▶
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-github"
+            >
+              <span class="btn-icon">📦</span>
+              <div class="btn-label-group">
+                <span
+                  class="btn-small"
+                  data-en="Production Build"
+                  data-he="בילד פרודקשן"
+                  >Production Build</span
+                >
+                <span class="btn-main">EAS APK & Repo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone Chassis for Home Screen -->
+        <div class="arcade-cabinet-wrapper">
+          <div class="crt-screen">
+            <div class="crt-overlay"></div>
+            <img
+              src="../assets/images/system-breach/screen-arcade.png"
+              alt="System Breach Home Screen"
+              class="arcade-display"
+              onerror="
+                this.src =
+                  'https://placehold.co/360x780/050b07/00ff66?text=SYSTEM_BREACH+HOMESCREEN'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Story & Challenge -->
+    <section class="content-wrapper story-challenge-section">
+      <h2
+        class="section-heading"
+        data-en="The Story & Challenge"
+        data-he="הסיפור ואתגרי המוצר"
+      >
+        The Story & Challenge
+      </h2>
+      <p
+        class="section-sub"
+        data-en="Bridging intuitive pen-and-paper nostalgia with production-grade mobile architecture:"
+        data-he="מהאינטואיציה של דף ועט על שולחן הכיתה לארכיטקטורת מובייל מלוטשת:"
+      >
+        Bridging intuitive pen-and-paper nostalgia with production-grade mobile
+        architecture:
+      </p>
+
+      <div class="games-grid">
+        <div class="game-card">
+          <div class="game-info">
+            <span
+              class="game-badge"
+              data-en="The Challenge"
+              data-he="הבעיה שזיהינו"
+              >The Challenge</span
+            >
+            <h4
+              data-en="Tactile Void & Hardware Throttling"
+              data-he="איבוד המגע הפיזי ומגבלות חומרה"
+            >
+              Tactile Void & Hardware Throttling
+            </h4>
+            <p
+              data-en="Classroom games relied on physical surface friction and analog intuition that touchscreens naturally flatten. Translating these mechanics into React Native triggered severe thermal throttling, frame rate drops, and state scrambling across route transitions."
+              data-he="משחקי התיכון התבססו על חיכוך ממשי ואינטואיציה ידנית שמסכי מגע מעלימים. המרת המשחקים ל-React Native חשפה צווארי בקבוק: התחממות מכשיר, איטיות בחישובי פיזיקה כבדים וערבוב לוחות בעת ניווט."
+            >
+              Classroom games relied on physical surface friction and analog
+              intuition that touchscreens naturally flatten. Translating these
+              mechanics into React Native triggered severe thermal throttling,
+              frame rate drops, and state scrambling across route transitions.
+            </p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-info">
+            <span
+              class="game-badge"
+              data-en="Product Solution"
+              data-he="הפתרון המוצרי והמשחקי"
+              >Product Solution</span
+            >
+            <h4
+              data-en="Sci-Fi Terminal & Reanimated Worklets"
+              data-he="טרמינל ספינה אחוד ו-Worklets מהירים"
+            >
+              Sci-Fi Terminal & Reanimated Worklets
+            </h4>
+            <p
+              data-en="Packaged the mini-games into an immersive cockpit survival console. Offloaded gesture-based rotations and ball impulses directly to UI-thread Reanimated worklets, and encapsulated game states with surgical lifecycle guards."
+              data-he="איחוד כלל המשחקים לתוך ממשק קוקפיט הישרדותי. העברת חישובי הפיזיקה והמחוות ישירות ל-Worklets ב-UI Thread של Reanimated, לצד מנגנון נעילת Hydration כירורגי בעת מעברי מסך."
+            >
+              Packaged the mini-games into an immersive cockpit survival
+              console. Offloaded gesture-based rotations and ball impulses
+              directly to UI-thread Reanimated worklets, and encapsulated game
+              states with surgical lifecycle guards.
+            </p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-info">
+            <span
+              class="game-badge"
+              data-en="Core Differentiator"
+              data-he="הערך וההשפעה"
+              >Core Differentiator</span
+            >
+            <h4
+              data-en="Meta-Integrity Loop at Native 60 FPS"
+              data-he="מטא-קמפיין מתמשך ב-60 FPS חלק"
+            >
+              Meta-Integrity Loop at Native 60 FPS
+            </h4>
+            <p
+              data-en="A cohesive meta-progression where solving puzzle configurations directly restores ship hull integrity (+20%), coupled with passive background time depletion that sustains user retention between mobile sessions."
+              data-he="מערכת התקדמות מטא-משחקית שבה פתרון לוחות משחזר ישירות 20% מתקינות מערכות הספינה, בשילוב חישוב שחיקה מתמשך ברקע שיוצר עניין ומחזיר שחקנים לסשנים חוזרים."
+            >
+              A cohesive meta-progression where solving puzzle configurations
+              directly restores ship hull integrity (+20%), coupled with passive
+              background time depletion that sustains user retention between
+              mobile sessions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete 6-Game + Telemetry Carousel -->
+    <section class="screens-carousel-section" id="carousel">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="System Protocols: Complete Roster"
+          data-he="פרוטוקולי המערכת: ארסנל המשחקים המלא"
+        >
+          System Protocols: Complete Roster
+        </h2>
+        <p
+          class="section-sub"
+          data-en="All 6 retro game modules and ship integrity telemetry running seamlessly in a 3-view carousel:"
+          data-he="כל ששת משחקי הנוסטלגיה ומסך הטלמטריה של הספינה בקרוסלה המציגה 3 מסכים בגלילה רציפה:"
+        >
+          All 6 retro game modules and ship integrity telemetry running
+          seamlessly in a 3-view carousel:
+        </p>
+
+        <div class="carousel-outer-wrapper">
+          <button
+            class="carousel-arrow-btn prev-btn"
+            id="carousel-prev"
+            aria-label="Previous Slide"
+          >
+            &#10094;
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carousel-track">
+              <!-- Game 1: Cargo Deck (Sorting Game) -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-cargo.png"
+                      alt="Cargo Deck"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/00ff66?text=Game+1+Cargo+Deck'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span class="game-badge">Protocol 01 • Sorting</span>
+                    <h4>Cargo Deck</h4>
+                    <p
+                      data-en="Fast-paced logistics sorting matrix. Players categorize incoming supply modules under tight time constraints to maintain bay equilibrium."
+                      data-he="מערך מיון לוגיסטי מהיר. השחקן ממיין מודולי אספקה נכנסים למפרצים הנכונים תחת לחץ זמן לשמירה על שיווי משקל המטען."
+                    >
+                      Fast-paced logistics sorting matrix. Players categorize
+                      incoming supply modules under tight time constraints to
+                      maintain bay equilibrium.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Game 2: Three Coins -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-coins.png"
+                      alt="Three Coins"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/00ff66?text=Game+2+Three+Coins'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span class="game-badge">Protocol 02 • Mechanics</span>
+                    <h4>Three Coins</h4>
+                    <p
+                      data-en="Tactile tabletop classic re-engineered with surface drag physics and deterministic state tracking across collisions."
+                      data-he="שחזור שלוש מטבעות עם חיכוך משטחים, זיהוי פגיעה בין מטבעות ושימור מזהה הכדור הנורה."
+                    >
+                      Tactile tabletop classic re-engineered with surface drag
+                      physics and deterministic state tracking across
+                      collisions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Game 3: Navigation Core -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-nav.png"
+                      alt="Navigation Core"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/00f0ff?text=Game+3+Nav+Core'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span
+                      class="game-badge"
+                      style="
+                        color: #00f0ff;
+                        border-color: rgba(0, 240, 255, 0.3);
+                        background: rgba(0, 240, 255, 0.1);
+                      "
+                      >Protocol 03 • Logic</span
+                    >
+                    <h4>Navigation Core</h4>
+                    <p
+                      data-en="Dual interlocking Venn rotors. Players sweep dial sectors to align chromatic nodes with top target blueprints."
+                      data-he="צמד גלגלי הנעה מצטלבים. השחקן מסובב רוטורים להתאמת מיקום צמתי הצבעים לדוגמת המטרה השמורה."
+                    >
+                      Dual interlocking Venn rotors. Players sweep dial sectors
+                      to align chromatic nodes with top target blueprints.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Game 4: Subsystem Grid -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-grid.png"
+                      alt="Plasma Router"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/eab308?text=Game+4+Grid'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span
+                      class="game-badge"
+                      style="
+                        color: #eab308;
+                        border-color: rgba(234, 179, 8, 0.3);
+                        background: rgba(234, 179, 8, 0.1);
+                      "
+                      >Protocol 04 • Puzzle</span
+                    >
+                    <h4>Plasma Router</h4>
+                    <p
+                      data-en="Spatial node-connection routing requiring tactical pathing across high-density circuit barriers."
+                      data-he="ניתוב חיבורי מעגלים במערך נקודות צפוף, הדורש סלילת נתיב תוך עקיפת מחסומים חשמליים."
+                    >
+                      Spatial node-connection routing requiring tactical pathing
+                      across high-density circuit barriers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Game 5: Mirror Pong -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-pong.png"
+                      alt="Mirror Pong"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/00ff66?text=Game+5+Mirror+Pong'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span class="game-badge">Protocol 05 • Physics</span>
+                    <h4>Mirror Pong</h4>
+                    <p
+                      data-en="Opposing dual paddles with contact-offset angle vectors, preventing CPU overheating and deadlocks."
+                      data-he="מחבטים מקבילים עם חישוב זווית החזרה יחסית לנקודת הפגיעה, ללא עומסי חישוב והתחממות."
+                    >
+                      Opposing dual paddles with contact-offset angle vectors,
+                      preventing CPU overheating and deadlocks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Game 6: Terminal Breach -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-terminal.png"
+                      alt="Quantum Grid"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/ef4444?text=Game+6+Terminal'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span
+                      class="game-badge"
+                      style="
+                        color: #ef4444;
+                        border-color: rgba(239, 68, 68, 0.3);
+                        background: rgba(239, 68, 68, 0.1);
+                      "
+                      >Protocol 06 • Reflex</span
+                    >
+                    <h4>Quantum Grid</h4>
+                    <p
+                      data-en="Reflex cipher decryptor testing timed pattern recall against accelerating security locks."
+                      data-he="פיצוח צפנים מבוסס זמן ותגובה מהירה אל מול רצפי מנעולי אבטחה מאיצים."
+                    >
+                      Reflex cipher decryptor testing timed pattern recall
+                      against accelerating security locks.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Meta 7: Command Telemetry -->
+              <div class="carousel-card-item">
+                <div class="game-card">
+                  <div class="game-preview">
+                    <img
+                      src="../assets/images/system-breach/game-nav.png"
+                      alt="Command Telemetry"
+                      onerror="
+                        this.src =
+                          'https://placehold.co/360x780/06120b/ff007f?text=Command+Decay'
+                      "
+                    />
+                  </div>
+                  <div class="game-info">
+                    <span
+                      class="game-badge"
+                      style="
+                        color: #ff007f;
+                        border-color: rgba(255, 0, 127, 0.3);
+                        background: rgba(255, 0, 127, 0.1);
+                      "
+                      >Meta System • Campaign</span
+                    >
+                    <h4>Command Telemetry</h4>
+                    <p
+                      data-en="Meta-campaign status console executing chunked 3-hour loss cycles while preserving exact partial timestamps."
+                      data-he="קונסולת פיקוד המנהלת שחיקת מערכות בבלוקים של 3 שעות ושומרת בדיוק את שארית הזמן בין כניסות."
+                    >
+                      Meta-campaign status console executing chunked 3-hour loss
+                      cycles while preserving exact partial timestamps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-arrow-btn next-btn"
+            id="carousel-next"
+            aria-label="Next Slide"
+          >
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep Dive & Key Decisions -->
+    <section class="content-wrapper deep-dive-section">
+      <h2
+        class="section-heading"
+        data-en="Deep Dive & Key Decisions"
+        data-he="החלטות ארכיטקטורה ופתרון בעיות"
+      >
+        Deep Dive & Key Decisions
+      </h2>
+      <p
+        class="section-sub"
+        data-en="Three pivotal architectural roadblocks resolved during the road to v1.1.0:"
+        data-he="שלוש בעיות ליבה הנדסיות ומבניות שפוצחו במהלך הפיתוח לגרסה 1.1.0:"
+      >
+        Three pivotal architectural roadblocks resolved during the road to
+        v1.1.0:
+      </p>
+
+      <div class="games-grid">
+        <div class="game-card">
+          <div class="game-info">
+            <span class="game-badge">State Hydration</span>
+            <h4
+              data-en="Surgical Board Hydration Guard"
+              data-he="נעילת Hydration במעברי פוקוס"
+            >
+              Surgical Board Hydration Guard
+            </h4>
+            <p
+              data-en="<strong>Issue:</strong> In Game 3, re-entering from the home screen triggered layout recalculations. Because holding flags cleared on the initial pass, secondary canvas repaints triggered empty generation runs that scrambled the board.<br><strong>Solution:</strong> Injected a focus-aware <code>boardHydratedRef</code> guard to isolate storage hydration from canvas resize triggers."
+              data-he="<strong>הבעיה:</strong> חזרה למשחק 3 ממסך הבית גרמה לרינדור כפול של הקנבס. איפוס משתני העזר בסבב הראשון גרם לסבב השני לזהות לוח ריק ולערבב את המטרה מחדש.<br><strong>הפתרון:</strong> הטמעת דגל <code>boardHydratedRef</code> מבוסס פוקוס שנועל את ה-State ומונע דריסה חוזרת עקב שינויי Layout."
+            >
+              <strong>Issue:</strong> In Game 3, re-entering from the home
+              screen triggered layout recalculations. Because holding flags
+              cleared on the initial pass, secondary canvas repaints triggered
+              empty generation runs that scrambled the board.<br /><strong
+                >Solution:</strong
+              >
+              Injected a focus-aware <code>boardHydratedRef</code> guard to
+              isolate storage hydration from canvas resize triggers.
+            </p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-info">
+            <span class="game-badge">Physics Optimization</span>
+            <h4
+              data-en="Paddle-Offset Angle Derivatives"
+              data-he="וקטורי החזרה לפי מרחק מפגש"
+            >
+              Paddle-Offset Angle Derivatives
+            </h4>
+            <p
+              data-en="<strong>Issue:</strong> The ball in Mirror Pong entered horizontal movement deadlocks. Complex continuous vector recalculations caused aggressive CPU overhead and severe mobile battery heating.<br><strong>Solution:</strong> Replaced heavy iterative loops with deterministic offset mapping: bounce angle is calculated purely by displacement from paddle center."
+              data-he="<strong>הבעיה:</strong> כדור הפונג ננעל על תנועות אופקיות איטיות. ניסיונות לפתור זאת בלולאות וקטורים כבדות הובילו לצריכת מעבד קיצונית ולהתחממות מהירה של הטלפון.<br><strong>הפתרון:</strong> מעבר לחישוב זווית החזרה דטרמיניסטי לפי מרחק הפגיעה ממרכז המחבט, ללא כל עומס חישובי."
+            >
+              <strong>Issue:</strong> The ball in Mirror Pong entered horizontal
+              movement deadlocks. Complex continuous vector recalculations
+              caused aggressive CPU overhead and severe mobile battery
+              heating.<br /><strong>Solution:</strong> Replaced heavy iterative
+              loops with deterministic offset mapping: bounce angle is
+              calculated purely by displacement from paddle center.
+            </p>
+          </div>
+        </div>
+
+        <div class="game-card">
+          <div class="game-info">
+            <span class="game-badge">Storage Mechanics</span>
+            <h4
+              data-en="Remainder-Preserving Decay Logic"
+              data-he="שחיקת שלמות משמרת שארית זמן"
+            >
+              Remainder-Preserving Decay Logic
+            </h4>
+            <p
+              data-en="<strong>Issue:</strong> Naive timestamp reconciliation wiped partial hours whenever the user reopened the app, resetting the countdown and punishing frequent short check-ins.<br><strong>Solution:</strong> Chunked time elapsed into exact 3-hour blocks (5% decay each), advancing the saved baseline exclusively by the processed chunks to protect leftover minutes."
+              data-he="<strong>הבעיה:</strong> חישוב שחיקה רגיל איפס את חותמת הזמן בכל כניסה, מה שגרם למחיקת שברי שעות מצטברים ולפגיעה בשחקנים שנכנסו לבדוק את הסטטוס בתדירות גבוהה.<br><strong>הפתרון:</strong> חלוקת הזמן לבלוקים של 3 שעות (5% שחיקה לבלוק) וקידום חותמת הזמן רק כמכפלת הבלוקים שנוכו כדי לשמור על שארית הזמן במדויק."
+            >
+              <strong>Issue:</strong> Naive timestamp reconciliation wiped
+              partial hours whenever the user reopened the app, resetting the
+              countdown and punishing frequent short check-ins.<br /><strong
+                >Solution:</strong
+              >
+              Chunked time elapsed into exact 3-hour blocks (5% decay each),
+              advancing the saved baseline exclusively by the processed chunks
+              to protect leftover minutes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specs Table -->
+    <section class="tech-specs-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="System Architecture & Logic"
+          data-he="ארכיטקטורה ולוגיקת משחק"
+        >
+          System Architecture & Logic
+        </h2>
+        <div class="specs-table">
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Core Framework & Routing"
+              data-he="סביבת פיתוח וניתוב"
+              >Core Framework & Routing</span
+            >
+            <span
+              class="spec-val"
+              data-en="React Native (Expo SDK 56) with Expo Router file-based route hierarchy"
+              data-he="React Native (Expo SDK 56) מבוסס מערכת ניתוב הקבצים של Expo Router"
+              >React Native (Expo SDK 56) with Expo Router file-based route
+              hierarchy</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Motion & Gesture Engine"
+              data-he="מנוע אנימציות ומחוות"
+              >Motion & Gesture Engine</span
+            >
+            <span
+              class="spec-val"
+              data-en="react-native-reanimated worklets executing 60 FPS sweeps on UI Thread"
+              data-he="Worklets של Reanimated ו-Gesture Handler בריצה חלקה של 60 FPS"
+              >react-native-reanimated worklets executing 60 FPS sweeps on UI
+              Thread</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="State & Background Persistence"
+              data-he="ניהול מצב ושמירה מתמשכת"
+              >State & Background Persistence</span
+            >
+            <span
+              class="spec-val"
+              data-en="AsyncStorage snapshot serialization, Context API & lifecycle hydration guards"
+              data-he="שמירת Snapshots ב-AsyncStorage, Context API ומנגנוני נעילת Hydration"
+              >AsyncStorage snapshot serialization, Context API & lifecycle
+              hydration guards</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Diagnostics & Cloud Build"
+              data-he="דיאגנוסטיקה ובילד בענן"
+              >Diagnostics & Cloud Build</span
+            >
+            <span
+              class="spec-val"
+              data-en="Clean 21/21 Expo Doctor verification; production preview builds via EAS Build"
+              data-he="מעבר מלא של 21/21 בדיקות Expo Doctor ובילד לייצור באמצעות EAS Build"
+              >Clean 21/21 Expo Doctor verification; production preview builds
+              via EAS Build</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="content-wrapper">
+        <p
+          data-en="SYSTEM_BREACH • Retro Mobile Arcade Architecture"
+          data-he="SYSTEM_BREACH • פיתוח ארקייד סלולרי עתיר ביצועים"
+        >
+          SYSTEM_BREACH • Retro Mobile Arcade Architecture
+        </p>
+      </div>
+    </footer>
+
+    <!-- Carousel & Language Switcher Logic -->
+    <script>
+      // 1. Always open at the top
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+
+      const track = document.getElementById("carousel-track");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const toggleBtn = document.getElementById("lang-toggle");
+      const items = track ? track.querySelectorAll(".carousel-card-item") : [];
+
+      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, items.length - getVisibleCount());
+      }
+
+      function updateCarousel() {
+        if (!track || !items.length) return;
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const isRtl = document.documentElement.dir === "rtl";
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.gap) || 24;
+        const step = itemWidth + gap;
+
+        const shift = isRtl ? (currentIndex * step) : (-currentIndex * step);
+        track.style.transform = `translateX(${shift}px)`;
+      }
+
+      function moveLeft() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        } else {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        }
+        updateCarousel();
+      }
+
+      function moveRight() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        } else {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        }
+        updateCarousel();
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", moveLeft);
+      if (nextBtn) nextBtn.addEventListener("click", moveRight);
+
+      window.addEventListener("resize", () => {
+        updateCarousel();
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("site_lang", lang);
+        const isHebrew = lang === "he";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
+        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+
+        // Keep physical left arrow pointing left (←), physical right arrow pointing right (→)
+        if (prevBtn) prevBtn.innerHTML = "&larr;";
+        if (nextBtn) nextBtn.innerHTML = "&rarr;";
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
+          if (text) el.innerHTML = text;
+        });
+
+        currentIndex = 0;
+        updateCarousel();
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          setLanguage(currentLang === "en" ? "he" : "en");
+        });
+      }
+
+      setLanguage(currentLang);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VELO — High-Performance Running Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/velo.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="app-nav">
+      <div class="nav-wrapper">
+        <a
+          href="../index.html"
+          class="portfolio-back"
+          data-en="&larr; Back to Portfolio"
+          data-he="&rarr; חזרה לקורות החיים"
+          >&larr; Back to Portfolio</a
+        >
+        <div class="nav-brand">
+          <img src="../assets/images/velo/icon.png" alt="VELO Logo" class="app-nav-logo" />
+          <span class="brand-name">VELO</span>
+        </div>
+        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
+      </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <span
+            class="tagline-pill"
+            data-en="⚡ Performance & Personal Records"
+            data-he="⚡ מעקב ביצועים ושיאים אישיים"
+            >⚡ Performance & Personal Records</span
+          >
+          <h1
+            class="hero-headline"
+            data-en="Run Focused.<br><span class='highlight'>Celebrate Every Record.</span>"
+            data-he="לרוץ ממוקד.<br><span class='highlight'>לחגוג כל שיא אישי.</span>"
+          >
+            Run Focused.<br /><span class="highlight"
+              >Celebrate Every Record.</span
+            >
+          </h1>
+          <p
+            class="hero-sub"
+            data-en="VELO is a sleek running tracker built with Electric Cyan dark aesthetics, automated personal record evaluation, live speed curves, and high-impact social share cards."
+            data-he="VELO היא אפליקציית ריצה חדה בעיצוב Electric Cyan כהה, המשלבת זיהוי שיאים אישיים בזמן אמת, גרף התפלגות מהירות מבוסס SVG והפקת כרטיסי שיתוף ממותגים."
+          >
+            VELO is a sleek running tracker built with Electric Cyan dark
+            aesthetics, automated personal record evaluation, live speed curves,
+            and high-impact social share cards.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="https://expo.dev"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-expo"
+            >
+              <span class="btn-icon">▲</span>
+              <div class="btn-label-group">
+                <span
+                  class="btn-small"
+                  data-en="Experience via"
+                  data-he="התנסות דרך"
+                  >Experience via</span
+                >
+                <span class="btn-main">Expo Go</span>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-github"
+            >
+              <span class="btn-icon">📦</span>
+              <div class="btn-label-group">
+                <span class="btn-small" data-en="Source Code" data-he="קוד מקור"
+                  >Source Code</span
+                >
+                <span class="btn-main">GitHub Repo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-phone-wrapper">
+          <div class="phone-frame">
+            <img
+              src="../assets/images/velo/screen-run.png"
+              alt="VELO Live Run"
+              class="phone-screen"
+              onerror="
+                this.src =
+                  'https://placehold.co/360x780/070a12/00f2fe?text=VELO+Live+Tracker'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Story & Challenge -->
+    <section class="story-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="The Product Story"
+          data-he="סיפור המוצר והאתגר"
+        >
+          The Product Story
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Designing a distraction-free running tool tailored for real-world movement and athletic motivation."
+          data-he="תכנון כלי אימונים נטול הסחות דעת המותאם לריצה בשטח ולמוטיבציה אישית."
+        >
+          Designing a distraction-free running tool tailored for real-world
+          movement and athletic motivation.
+        </p>
+
+        <div class="story-cards">
+          <div class="story-card">
+            <span class="story-badge" data-en="The Challenge" data-he="האתגר"
+              >The Challenge</span
+            >
+            <h3
+              data-en="Cluttered Apps & Misleading Pace"
+              data-he="עומס מסכים וקצב מטעה"
+            >
+              Cluttered Apps & Misleading Pace
+            </h3>
+            <p
+              data-en="Mainstream running apps overwhelm runners with social noise, infinite stoplight pace spikes, and UI misclicks when holding a phone on the move."
+              data-he="אפליקציות הריצה הקיימות מעמיסות פיצ'רים חברתיים, סובלות מקפיצות קצב שווא בעצירות רמזור, וחשופות ללחיצות שווא בידיים מיוזעות תוך כדי תנועה."
+            >
+              Mainstream running apps overwhelm runners with social noise,
+              infinite stoplight pace spikes, and UI misclicks when holding a
+              phone on the move.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Product Solution"
+              data-he="הפתרון המוצרי"
+              >Product Solution</span
+            >
+            <h3
+              data-en="Pure Focus & Immediate Feedback"
+              data-he="מיקוד מרבי ומשוב מיידי"
+            >
+              Pure Focus & Immediate Feedback
+            </h3>
+            <p
+              data-en="An immersive dark-mode tracker featuring an auto-pause threshold, an interactive speed curve, auto PR celebrations, and an accidental-touch prevention mode."
+              data-he="ממשק Dark Mode סוחף עם מנגנון השהיה אוטומטי (0.8 קמ״ש), גרף מהירות SVG אינטראקטיבי, זיהוי שיאים אישיים ומצב מסך מלא המונע יציאה בטעות."
+            >
+              An immersive dark-mode tracker featuring an auto-pause threshold,
+              an interactive speed curve, auto PR celebrations, and an
+              accidental-touch prevention mode.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Core Impact"
+              data-he="הערך המרכזי"
+              >Core Impact</span
+            >
+            <h3
+              data-en="Instant Pride & Aesthetic Shareability"
+              data-he="סיפוק מיידי ושיתוף מעוצב"
+            >
+              Instant Pride & Aesthetic Shareability
+            </h3>
+            <p
+              data-en="Runners get rewarded instantly at the finish line with confetti particle feedback and a 1-tap branded story card ready for Instagram and WhatsApp."
+              data-he="הרץ זוכה לסיפוק מיידי ברגע חציית היעד עם אנימציית חגיגה מותאמת, לצד כרטיס שיתוף ממותג ומינימליסטי ב-Dark Mode המיועד לסטורי."
+            >
+              Runners get rewarded instantly at the finish line with confetti
+              particle feedback and a 1-tap branded story card ready for
+              Instagram and WhatsApp.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Screen Showcase (Carousel - 4 items, 3 visible on desktop) -->
+    <section class="screens-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Core Screen Walkthrough"
+          data-he="סיור מסכי האפליקציה"
+        >
+          Core Screen Walkthrough
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Purpose-built interfaces balancing field clarity, telemetry accuracy, and post-run gratification."
+          data-he="ממשקים ממוקדי מטרה המאזנים בין קריאות בשטח, דיוק נתונים ותגמול פסיכולוגי בסיום."
+        >
+          Purpose-built interfaces balancing field clarity, telemetry accuracy,
+          and post-run gratification.
+        </p>
+
+        <div class="screens-carousel-wrapper">
+          <button
+            class="carousel-nav-btn prev"
+            id="carousel-prev"
+            aria-label="Previous Screen"
+          >
+            &larr;
+          </button>
+
+          <div class="screens-carousel-viewport">
+            <div class="screens-carousel-track" id="carousel-track">
+              <!-- Screen 1: Active Live Run -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/velo/WhatsApp Image 2026-11-02 at 17.39.19.jpeg"
+                    alt="Active Telemetry & Live Tracker"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/070a12/00f2fe?text=Live+Tracker'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="1. Active Telemetry & Live Tracker"
+                  data-he="1. מעקב אימון חי וטלמטריה"
+                >
+                  1. Active Telemetry & Live Tracker
+                </h4>
+                <p
+                  data-en="Real-time running dashboard tracking elapsed time (0m 2s), live pace (10'46\"/km), step count, dynamic GPS location, and Pause/Finish buttons."
+                  data-he="דשבורד אימון חי המציג זמן ריצה רציף, קצב מדוד, מונה צעדים, איכון מיקום דינמי ומקשי שליטה ארגונומיים להשהיה וסיום."
+                >
+                  Real-time running dashboard tracking elapsed time (0m 2s), live pace (10'46"/km), step count, dynamic GPS location, and Pause/Finish buttons.
+                </p>
+              </div>
+
+              <!-- Screen 2: Pre-Run GPS Lock -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/velo/screen-run.png"
+                    alt="Pre-Run & GPS Lock"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/070a12/00f2fe?text=Pre+Run+Screen'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="2. Pre-Run & GPS Lock"
+                  data-he="2. הכנה לריצה ונעילת GPS"
+                >
+                  2. Pre-Run & GPS Lock
+                </h4>
+                <p
+                  data-en="Live GPS triangulation map, battery level monitoring, previous run summary, and instant single-tap launch into tracking."
+                  data-he="מפת איכון GPS חיה, ניטור מצב סוללה, גישה מהירה למדדי הריצה האחרונה והזנקת אימון בלחיצה אחת."
+                >
+                  Live GPS triangulation map, battery level monitoring, previous run summary, and instant single-tap launch into tracking.
+                </p>
+              </div>
+
+              <!-- Screen 3: Run Details & Speed Distribution -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/velo/screen-details.png"
+                    alt="Run Details & Speed Curve"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/070a12/00f2fe?text=Run+Details'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="3. Run Details & Speed Distribution"
+                  data-he="3. פירוט אימון ועקומת מהירות"
+                >
+                  3. Run Details & Speed Distribution
+                </h4>
+                <p
+                  data-en="Continuous SVG speed curve with average/max indicators (8.87 / 13.91 km/h), PR badge ('Longest Run'), split times, and Leaflet route mapping."
+                  data-he="גרף מהירות SVG רציף עם מדדי מהירות ממוצעת ושיא, תגית שיא אישי ('Longest Run'), זמני ביניים ומפת מסלול מפורטת."
+                >
+                  Continuous SVG speed curve with average/max indicators (8.87 / 13.91 km/h), PR badge ('Longest Run'), split times, and Leaflet route mapping.
+                </p>
+              </div>
+
+              <!-- Screen 4: Branded Share Card -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/velo/screen-share.jpg"
+                    alt="Branded Share Card"
+                    class="phone-screen"
+                    style="object-fit: contain; background: #0b0f19;"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/070a12/00f2fe?text=Share+Card'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="4. Branded Share Card Generator"
+                  data-he="4. הפקת כרטיס שיתוף ממותג"
+                >
+                  4. Branded Share Card Generator
+                </h4>
+                <p
+                  data-en="High-resolution dark-mode shareable card embedding satellite route path, date, distance (5.37 km), duration, and pace for social sharing."
+                  data-he="כרטיס שיתוף יוקרתי ב-Dark Mode המפיק תמונה לשיתוף ברשתות עם תוואי הריצה, תאריך, מרחק (5.37 ק״מ), משך ומהירות."
+                >
+                  High-resolution dark-mode shareable card embedding satellite route path, date, distance (5.37 km), duration, and pace for social sharing.
+                </p>
+              </div>
+
+              <!-- Screen 5: Lifetime Telemetry -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/velo/screen-history.png"
+                    alt="Lifetime Stats & Activity History"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/070a12/00f2fe?text=History+Screen'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="5. Lifetime Stats & Activity History"
+                  data-he="5. היסטוריית אימונים ומדדי שיא"
+                >
+                  5. Lifetime Stats & Activity History
+                </h4>
+                <p
+                  data-en="Aggregated runner telemetry tracking lifetime distance (11.16 km), total time, workout counts, and past chronological session logs."
+                  data-he="דשבורד הישגים מצטבר המציג סך קילומטרים, זמן ריצה כולל, כמות אימונים ויומן פעילויות היסטורי כרונולוגי מלא."
+                >
+                  Aggregated runner telemetry tracking lifetime distance (11.16 km), total time, workout counts, and past chronological session logs.
+                </p>
+              </div>
+
+              <!-- Screen 6: Voice Coaching & Settings -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/velo/screen-settings.png"
+                    alt="Voice Coaching & Settings"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/070a12/00f2fe?text=Settings+Screen'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="6. Voice Coaching & App Settings"
+                  data-he="6. אימון קולי והגדרות אפליקציה"
+                >
+                  6. Voice Coaching & App Settings
+                </h4>
+                <p
+                  data-en="Configurable distance interval voice cues (every 1 km), audio milestone announcements, theme switching (System/Dark), and preferences."
+                  data-he="הגדרת הנחיות קוליות במרווחי מרחק קבועים (בכל 1 ק״מ), התראות קוליות על אבני דרך, החלפת ערכות נושא (מערכת/כהה) והעדפות אישיות."
+                >
+                  Configurable distance interval voice cues (every 1 km), audio milestone announcements, theme switching (System/Dark), and preferences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-nav-btn next"
+            id="carousel-next"
+            aria-label="Next Screen"
+          >
+            &rarr;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Deep Dive & Key Decisions -->
+    <section class="story-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Engineering Deep Dive"
+          data-he="החלטות ארכיטקטורה ופתרון בעיות"
+        >
+          Engineering Deep Dive
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Overcoming hardware limitations, layout overflows, and rendering bugs discovered during field testing."
+          data-he="התמודדות עם מגבלות חומרה, קריסות סנסורים וחריגות תצוגה שנחשפו במהלך ריצות שטח אמיתיות."
+        >
+          Overcoming hardware limitations, layout overflows, and rendering bugs
+          discovered during field testing.
+        </p>
+
+        <div class="story-cards">
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Data Resiliency"
+              data-he="עמידות נתונים"
+              >Data Resiliency</span
+            >
+            <h3
+              data-en="Hybrid Pedometer & Cadence Fallback"
+              data-he="מנגנון סנכרון צעדים היברידי"
+            >
+              Hybrid Pedometer & Cadence Fallback
+            </h3>
+            <p
+              data-en="Hardware pedometers frequently stall on Android. We built a dynamic fallback formula (1,380 steps/km) activating when sensor events read 0, preventing empty stats."
+              data-he="חיישן הצעדים נטה להחזיר 0 במכשירי אנדרואיד. יישמנו מנגנון היברידי המחשב צעדים מקצב הריצה והמרחק (1,380 צעדים לק״מ) ברגע שהחיישן נכשל, כך שהמדד לעולם אינו נשאר ריק."
+            >
+              Hardware pedometers frequently stall on Android. We built a
+              dynamic fallback formula (1,380 steps/km) activating when sensor
+              events read 0, preventing empty stats.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Mapping & WebViews"
+              data-he="מפות וביצועים"
+              >Mapping & WebViews</span
+            >
+            <h3
+              data-en="Keyless Dark Tiles via Inverted CSS"
+              data-he="מפה כהה עצמאית ללא תלות ב-API"
+            >
+              Keyless Dark Tiles via Inverted CSS
+            </h3>
+            <p
+              data-en="Third-party dark tiles displayed watermarks and 403 API key errors. We routed open OpenStreetMap tiles through an inline inverted SVG/CSS filter inside the WebView."
+              data-he="שירותי מפות כהות דרשו מפתחות בתשלום והציגו חותמות מים. פתרנו זאת ע״י שימוש בטיילים חופשיים של OpenStreetMap והחלת פילטר היפוך צבעים (CSS invert/hue-rotate) בתוך ה-WebView."
+            >
+              Third-party dark tiles displayed watermarks and 403 API key
+              errors. We routed open OpenStreetMap tiles through an inline
+              inverted SVG/CSS filter inside the WebView.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Layout Engine"
+              data-he="בקרת ממשק ותצוגה"
+              >Layout Engine</span
+            >
+            <h3
+              data-en="Overscroll Shielding & Off-Screen Capture"
+              data-he="מניעת גלילת יתר וצילום מבודד"
+            >
+              Overscroll Shielding & Off-Screen Capture
+            </h3>
+            <p
+              data-en="Absolute-positioned PR badges triggered horizontal scrollbars and white background bleeding. We locked container boundaries with overflow isolation and moved share snapshots off-screen."
+              data-he="תגיות שיא שחרגו מגבולות הכרטיס גרמו לגלילה אופקית כפולה שחשפה רקע לבן. בודדנו את הגבולות באמצעות overflow מבוקר והעברנו את הפקת כרטיס השיתוף לאלמנט מוסתר בנפרד."
+            >
+              Absolute-positioned PR badges triggered horizontal scrollbars and
+              white background bleeding. We locked container boundaries with
+              overflow isolation and moved share snapshots off-screen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Tech Specs Table -->
+    <section class="tech-specs-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Architecture & Tech Stack"
+          data-he="מפרט טכנולוגי וארכיטקטורה"
+        >
+          Architecture & Tech Stack
+        </h2>
+        <div class="specs-table">
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Core Framework"
+              data-he="תשתית פיתוח"
+              >Core Framework</span
+            >
+            <span
+              class="spec-val"
+              data-en="React Native (Expo SDK) with TypeScript"
+              data-he="React Native (Expo SDK) בשילוב TypeScript"
+              >React Native (Expo SDK) with TypeScript</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Telemetry & Mapping"
+              data-he="טלמטריה ומיפוי"
+              >Telemetry & Mapping</span
+            >
+            <span
+              class="spec-val"
+              data-en="Expo Location, Leaflet WebView (Inverted Dark Tiles), React Native SVG Charts"
+              data-he="Expo Location, מפת Leaflet ב-WebView מוצלל, וגרפי מהירות ב-React Native SVG"
+              >Expo Location, Leaflet WebView (Inverted Dark Tiles), React
+              Native SVG Charts</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Evaluation & Hardware"
+              data-he="חישוב ושליטה בחומרה"
+              >Evaluation & Hardware</span
+            >
+            <span
+              class="spec-val"
+              data-en="Offline PR Engine, Hybrid Cadence Calculator, Sticky Immersive Navigation"
+              data-he="מנוע זיהוי שיאים באחסון מקומי, מודל צעדים היברידי ושליטה ב-Navigation Bar"
+              >Offline PR Engine, Hybrid Cadence Calculator, Sticky Immersive
+              Navigation</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Export & Media"
+              data-he="ייצוא ושיתוף"
+              >Export & Media</span
+            >
+            <span
+              class="spec-val"
+              data-en="React Native ViewShot (Off-Screen 1080p Canvas) & Expo Sharing"
+              data-he="הפקת כרטיסי PNG ברזולוציה גבוהה (ViewShot מוסתר) ו-Expo Sharing"
+              >React Native ViewShot (Off-Screen 1080p Canvas) & Expo
+              Sharing</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="content-wrapper">
+        <p
+          data-en="VELO • Engineered for Runners & Performance"
+          data-he="VELO • אפליקציית ריצה ומעקב ביצועים"
+        >
+          VELO • Engineered for Runners & Performance
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts: Bilingual Toggle & Infinite Carousel -->
+    <script>
+      // 1. Always open at the top
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+
+      const toggleBtn = document.getElementById("lang-toggle");
+      const track = document.getElementById("carousel-track");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const items = track ? track.querySelectorAll(".carousel-item") : [];
+
+      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        return window.innerWidth > 900 ? 3 : 1;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, items.length - getVisibleCount());
+      }
+
+      function updateCarousel() {
+        if (!track || !items.length) return;
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const gap = 32; // 2rem
+        const isRtl = document.documentElement.dir === "rtl";
+        const shift = isRtl ? (currentIndex * (itemWidth + gap)) : (-currentIndex * (itemWidth + gap));
+        track.style.transform = `translateX(${shift}px)`;
+      }
+
+      function moveLeft() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        } else {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        }
+        updateCarousel();
+      }
+
+      function moveRight() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        } else {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        }
+        updateCarousel();
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", moveLeft);
+      if (nextBtn) nextBtn.addEventListener("click", moveRight);
+
+      window.addEventListener("resize", () => {
+        updateCarousel();
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("site_lang", lang);
+        const isHebrew = lang === "he";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
+        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+
+        // Keep physical left arrow pointing left (←), physical right arrow pointing right (→)
+        if (prevBtn) prevBtn.innerHTML = "&#8592;";
+        if (nextBtn) nextBtn.innerHTML = "&#8594;";
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
+          if (text) el.innerHTML = text;
+        });
+
+        currentIndex = 0;
+        updateCarousel();
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          setLanguage(currentLang === "en" ? "he" : "en");
+        });
+      }
+
+      setLanguage(currentLang);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TripDiary — Your Smart Offline Travel Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/tripdiary.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <header class="app-nav">
+      <div class="nav-wrapper">
+        <a
+          href="../index.html"
+          class="portfolio-back"
+          data-en="&larr; Back to Portfolio"
+          data-he="&rarr; חזרה לקורות החיים"
+          >&larr; Back to Portfolio</a
+        >
+        <div class="nav-brand">
+          <img src="../assets/images/tripdiary/icon.png" alt="TripDiary Logo" class="app-nav-logo" />
+          <span class="brand-name">TripDiary</span>
+        </div>
+        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
+      </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <span
+            class="tagline-pill"
+            data-en="🌍 100% Offline Travel Companion"
+            data-he="🌍 אפליקציית טיולים עצמאית 100% באופליין"
+            >🌍 100% Offline Travel Companion</span
+          >
+          <h1
+            class="hero-headline"
+            data-en="Zero Roaming Stress.<br><span class='highlight'>Pure Mountain Precision.</span>"
+            data-he="בלי חרדת גלישה.<br><span class='highlight'>דיוק שוויצרי בכל יום טיול.</span>"
+          >
+            Zero Roaming Stress.<br /><span class="highlight"
+              >Pure Mountain Precision.</span
+            >
+          </h1>
+          <p
+            class="hero-sub"
+            data-en="TripDiary brings your bulk Excel travel itineraries, categorized attraction banks, dynamic luggage checklists, utility tools, and chronological daily PDF logs into one unified, offline-first mobile app."
+            data-he="TripDiary מרכזת לוחות זמנים מורכבים מאקסל, בנק אטרקציות מסווג עם שעות ועלויות, כלי עזר חיוניים בשטח, רשימות ציוד דינמיות והפקת יומן מסע כרונולוגי ל-PDF — באפליקציה מהירה שעובדת מושלם ללא שום קליטה."
+          >
+            TripDiary brings your bulk Excel travel itineraries, categorized
+            attraction banks, dynamic luggage checklists, utility tools, and
+            chronological daily PDF logs into one unified, offline-first mobile
+            app.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="https://expo.dev"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-expo"
+            >
+              <span class="btn-icon">▲</span>
+              <div class="btn-label-group">
+                <span class="btn-small" data-en="Test via" data-he="התנסות דרך"
+                  >Test via</span
+                >
+                <span class="btn-main">Expo Go</span>
+              </div>
+            </a>
+
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-github"
+            >
+              <span class="btn-icon">📦</span>
+              <div class="btn-label-group">
+                <span
+                  class="btn-small"
+                  data-en="Source & APK"
+                  data-he="קוד מקור ו-APK"
+                  >Source & APK</span
+                >
+                <span class="btn-main">GitHub Repo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-phone-wrapper">
+          <div class="phone-frame">
+            <img
+              src="../assets/images/tripdiary/screen-home.png"
+              alt="TripDiary Home Screen"
+              class="phone-screen"
+              onerror="
+                this.src =
+                  'https://placehold.co/360x780/064e3b/ffffff?text=TripDiary+Home+Screen'
+              "
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mountains-backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1440 320" fill="none" preserveAspectRatio="none">
+          <polygon
+            points="0,320 0,160 210,90 420,200 680,80 940,190 1180,70 1440,150 1440,320"
+            fill="rgba(16, 185, 129, 0.08)"
+          />
+          <polygon
+            points="0,320 0,220 180,140 360,250 580,120 820,230 1060,110 1280,210 1440,170 1440,320"
+            fill="rgba(5, 150, 105, 0.12)"
+          />
+          <polygon
+            points="0,320 0,260 140,210 320,280 520,180 740,270 980,160 1200,260 1380,200 1440,230 1440,320"
+            fill="rgba(5, 150, 105, 0.18)"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- 2. The Story & Challenge -->
+    <section class="story-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Behind The Product"
+          data-he="מאחורי המוצר"
+        >
+          Behind The Product
+        </h2>
+        <div class="story-cards">
+          <div class="story-card">
+            <span class="story-badge" data-en="The Challenge" data-he="האתגר"
+              >The Challenge</span
+            >
+            <h3
+              data-en="Offline Fragility & Data Scatter"
+              data-he="תלות ברשת וכאוס נתונים בשטח"
+            >
+              Offline Fragility & Data Scatter
+            </h3>
+            <p
+              data-en="Travel planning typically degrades into fragmented spreadsheets, screenshots, and cloud apps that freeze immediately when cellular data drops in alpine valleys or border crossings."
+              data-he="תכנון טיול מתפזר לרוב בין גיליונות אקסל, צילומי מסך בוואטסאפ ויישומי ענן שתלויים ברשת — ונתקעים בדיוק ברגעי ניתוק קליטה במעברי הרים, טיסות ובאזורים כפריים."
+            >
+              Travel planning typically degrades into fragmented spreadsheets,
+              screenshots, and cloud apps that freeze immediately when cellular
+              data drops in alpine valleys or border crossings.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Product Solution"
+              data-he="הפתרון המוצרי"
+              >Product Solution</span
+            >
+            <h3
+              data-en="Single-Source Local Engine"
+              data-he="מנוע קריאה מקומי מבוסס אקסל"
+            >
+              Single-Source Local Engine
+            </h3>
+            <p
+              data-en="A native offline-first mobile app that imports custom Excel itineraries with flexible schema fallback, zero cloud dependency, and resilient client-side storage."
+              data-he="אפליקציית נייטיב עצמאית לחלוטין המייבאת קובצי אקסל שלמים, מסווגת שעות פתיחה, מחירים ומסלולים, ושומרת את כל הנתונים ישירות על גבי המכשיר."
+            >
+              A native offline-first mobile app that imports custom Excel
+              itineraries with flexible schema fallback, zero cloud dependency,
+              and resilient client-side storage.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Core Differentiator"
+              data-he="הערך המרכזי"
+              >Core Differentiator</span
+            >
+            <h3
+              data-en="Native RTL Parity & Physical Backups"
+              data-he="התאמת RTL מלאה וגיבויי חירום"
+            >
+              Native RTL Parity & Physical Backups
+            </h3>
+            <p
+              data-en="Flawless right-to-left Hebrew UI layout paired with one-tap chronological PDF export, ensuring travelers have an elegant, printable physical itinerary at all times."
+              data-he="ממשק עברית תקני ב-100% תאימות RTL ללא שבירות עיצוב, לצד ייצוא בלחיצת כפתור של יומן המסע למסמך PDF כרונולוגי מושלם לגיבוי פיזי מודפס."
+            >
+              Flawless right-to-left Hebrew UI layout paired with one-tap
+              chronological PDF export, ensuring travelers have an elegant,
+              printable physical itinerary at all times.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Screen Showcase (Carousel) -->
+    <section class="screens-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="App Screen Showcase"
+          data-he="מסכי האפליקציה"
+        >
+          App Screen Showcase
+        </h2>
+        <p
+          class="section-sub"
+          data-en="Swipe through the core interfaces engineered for resilient offline travel:"
+          data-he="גללו בין המסכים המרכזיים שפותחו לשימוש שטח עצמאי ונוח:"
+        >
+          Swipe through the core interfaces engineered for resilient offline
+          travel:
+        </p>
+
+        <div class="carousel-container">
+          <button
+            class="carousel-nav-btn carousel-btn-left"
+            id="carousel-left"
+            aria-label="Scroll Left"
+          >
+            &#8249;
+          </button>
+          <button
+            class="carousel-nav-btn carousel-btn-right"
+            id="carousel-right"
+            aria-label="Scroll Right"
+          >
+            &#8250;
+          </button>
+
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carousel-track">
+            <!-- Screen 1: Daily Route (Home) -->
+            <div class="carousel-card">
+              <div class="phone-frame mini">
+                <img
+                  src="../assets/images/tripdiary/screen-home.png"
+                  alt="Daily Itinerary Screen"
+                  class="phone-screen"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/300x650/064e3b/ffffff?text=Daily+Itinerary'
+                  "
+                />
+              </div>
+              <h4
+                data-en="1. Active Itinerary (Home)"
+                data-he="1. מסלול יומי פעיל (בית)"
+              >
+                1. Active Itinerary (Home)
+              </h4>
+              <p
+                data-en="Centered as the primary navigation anchor. Features automatic calendar date selection, completion checkmarks, and instant external map launching."
+                data-he="מרכז הניווט הראשי של האפליקציה. נפתח אוטומטית ביום הנוכחי בלוח השנה, כולל סימוני השלמת יעדים וקישור מהיר לניווט חיצוני."
+              >
+                Centered as the primary navigation anchor. Features automatic
+                calendar date selection, completion checkmarks, and instant
+                external map launching.
+              </p>
+            </div>
+
+            <!-- Screen 2: Attractions Bank -->
+            <div class="carousel-card">
+              <div class="phone-frame mini">
+                <img
+                  src="../assets/images/tripdiary/screen-attractions.png"
+                  alt="Attractions Bank Screen"
+                  class="phone-screen"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/300x650/047857/ffffff?text=Attractions+Bank'
+                  "
+                />
+              </div>
+              <h4
+                data-en="2. Attractions Bank"
+                data-he="2. בנק אטרקציות ויעדים"
+              >
+                2. Attractions Bank
+              </h4>
+              <p
+                data-en="Horizontal category bar anchored to the right for RTL. Displays rich attraction cards with verified pricing tiers (Adult/Child/Student) and opening hours."
+                data-he="סרגל קטגוריות אופקי מיושר לימין. מציג כרטיסי יעדים עשירים עם שעות פתיחה, תמחור מפוצל (מבוגר/ילד/סטודנט) והערות ביקור."
+              >
+                Horizontal category bar anchored to the right for RTL. Displays
+                rich attraction cards with verified pricing tiers
+                (Adult/Child/Student) and opening hours.
+              </p>
+            </div>
+
+            <!-- Screen 3: Packing Checklist -->
+            <div class="carousel-card">
+              <div class="phone-frame mini">
+                <img
+                  src="../assets/images/tripdiary/screen-packing.png"
+                  alt="Packing Checklists"
+                  class="phone-screen"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/300x650/059669/ffffff?text=Packing+Checklist'
+                  "
+                />
+              </div>
+              <h4
+                data-en="3. Smart Luggage Checklist"
+                data-he="3. צ'קליסט ציוד ומזוודות"
+              >
+                3. Smart Luggage Checklist
+              </h4>
+              <p
+                data-en="Dynamic luggage tracker with live packing progress bars, custom item creation, and single-tap luggage toggles to guarantee nothing critical stays behind."
+                data-he="ניהול ציוד חכם בעברית מלאה הכולל מד התקדמות אחוזים חי, יצירה ועריכה של פריטים אישיים וסימון מהיר במזוודות."
+              >
+                Dynamic luggage tracker with live packing progress bars, custom
+                item creation, and single-tap luggage toggles to guarantee
+                nothing critical stays behind.
+              </p>
+            </div>
+
+            <!-- Screen 4: Utilities & Tools -->
+            <div class="carousel-card">
+              <div class="phone-frame mini">
+                <img
+                  src="../assets/images/tripdiary/screen-utilities.png"
+                  alt="Utilities & Travel Tools"
+                  class="phone-screen"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/300x650/0f766e/ffffff?text=Utilities+Tools'
+                  "
+                />
+              </div>
+              <h4
+                data-en="4. Utilities & Trip Manager"
+                data-he="4. כלים שימושיים וניהול טיול"
+              >
+                4. Utilities & Trip Manager
+              </h4>
+              <p
+                data-en="Instant currency converter, customizable emergency contact card (user-defined without hardcoded defaults), and new Excel dataset imports with brand-styled error alerts."
+                data-he="מחשבון המרת מטבעות מהיר, כרטיסיית מספרי חירום בהתאמה אישית מלאה של המשתמש (ללא הנחות מוצא קבועות מראש), והעלאת קובצי אקסל חדשים עם התראות שגיאה מעוצבות."
+              >
+                Instant currency converter, customizable emergency contact card
+                (user-defined without hardcoded defaults), and new Excel dataset
+                imports with brand-styled error alerts.
+              </p>
+            </div>
+
+            <!-- Screen 5: Daily Journal & PDF -->
+            <div class="carousel-card">
+              <div class="phone-frame mini">
+                <img
+                  src="../assets/images/tripdiary/screen-pdf.png"
+                  alt="Printable Daily PDF"
+                  class="phone-screen"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/300x650/10b981/ffffff?text=PDF+Summary+Preview'
+                  "
+                />
+              </div>
+              <h4
+                data-en="5. Travel Log & PDF Export"
+                data-he="5. יומן אישי וייצוא ל-PDF"
+              >
+                5. Travel Log & PDF Export
+              </h4>
+              <p
+                data-en="Record daily highlights with automatic missing-location fallbacks, and convert memories into a clean chronological PDF ordered from morning to night."
+                data-he="תיעוד חוויות וזיכרונות עם מנגנון ברירת מחדל למיקומים חסרים, והפקת קובץ PDF מעוצב ומסודר כרונולוגית מהבוקר ועד הלילה."
+              >
+                Record daily highlights with automatic missing-location
+                fallbacks, and convert memories into a clean chronological PDF
+                ordered from morning to night.
+              </p>
+            </div>
+          </div>
+          </div>
+
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Deep Dive / Key Decisions -->
+    <section class="story-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Engineering Deep Dive & Key Decisions"
+          data-he="החלטות עמוקות ופתרון בעיות"
+        >
+          Engineering Deep Dive & Key Decisions
+        </h2>
+        <div class="story-cards">
+          <!-- Decision 1 -->
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Performance & Stability"
+              data-he="יציבות וביצועים"
+              >Performance & Stability</span
+            >
+            <h3
+              data-en="Eliminating Native Map Boot Crashes"
+              data-he="הסרת מפות נייטיב למניעת קריסות באופליין"
+            >
+              Eliminating Native Map Boot Crashes
+            </h3>
+            <p
+              data-en="Embedding offline react-native-maps SDKs led to native memory overhead and boot crashes under no-service conditions. We intentionally stripped embedded map components in favor of lightweight location metadata with external Google Maps intent triggers, achieving zero-crash stability."
+              data-he="שילוב רכיבי מפה כבדים גרם לעומסי זיכרון ולקריסות נייטיב בעליית האפליקציה ללא רשת. בחרנו להסיר את המפה המובנית לטובת כרטיסי מידע קלים עם כפתור ניווט חיצוני ישיר ל-Google Maps, מה שהשיג יציבות מוחלטת ואפס קריסות."
+            >
+              Embedding offline react-native-maps SDKs led to native memory
+              overhead and boot crashes under no-service conditions. We
+              intentionally stripped embedded map components in favor of
+              lightweight location metadata with external Google Maps intent
+              triggers, achieving zero-crash stability.
+            </p>
+          </div>
+
+          <!-- Decision 2 -->
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Data Pipeline"
+              data-he="זרימת נתונים וחוויית משתמש"
+              >Data Pipeline</span
+            >
+            <h3
+              data-en="Chronological Order in PDF Synthesis"
+              data-he="סידור כרונולוגי בייצוא קובצי PDF"
+            >
+              Chronological Order in PDF Synthesis
+            </h3>
+            <p
+              data-en="The local journal state was rendered with LIFO ordering (newest first), creating inverted summaries when printing to PDF. We refactored the HTML generation pipeline to sort entries chronologically ascending from morning to night, guaranteeing a readable day-by-day travel story."
+              data-he="רשימת הזיכרונות ביומן הוצגה בסדר הפוך (הזיכרון האחרון למעלה), מה שגרם למסמכי ה-PDF להיקרא מהסוף להתחלה. ביצענו רפקטורינג מלא לצנרת יצירת ה-HTML המודפס כדי לכפות סדר כרונולוגי עולה מבוקר ועד לילה."
+            >
+              The local journal state was rendered with LIFO ordering (newest
+              first), creating inverted summaries when printing to PDF. We
+              refactored the HTML generation pipeline to sort entries
+              chronologically ascending from morning to night, guaranteeing a
+              readable day-by-day travel story.
+            </p>
+          </div>
+
+          <!-- Decision 3 -->
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Mobile UX Architecture"
+              data-he="ארכיטקטורת ניווט ו-RTL"
+              >Mobile UX Architecture</span
+            >
+            <h3
+              data-en="Hardware Back Routing & RTL Horizontal Grids"
+              data-he="תיקון כפתור חזור פיזי ויישור RTL לגריד אופקי"
+            >
+              Hardware Back Routing & RTL Horizontal Grids
+            </h3>
+            <p
+              data-en="In RTL mode, Android mistook the left-most tab (Packing) as the root exit screen, and filter bars opened scrolled to the end. We anchored initialRouteName to the central 'Home' screen, intercepted BackHandler, and applied row-reverse flex setups on horizontal category carousels."
+              data-he="בממשק RTL, מערכת ההפעלה התייחסה לטאב השמאלי כמסך השורש וסרגלי סינון נפתחו הפוך בצד השמאלי. פתרנו זאת באמצעות קיבוע מסך הבית המרכזי כ-Initial Route, האזנה ל-BackHandler ועיגון ימני מלא של גלילות האטרקציות."
+            >
+              In RTL mode, Android mistook the left-most tab (Packing) as the
+              root exit screen, and filter bars opened scrolled to the end. We
+              anchored initialRouteName to the central 'Home' screen,
+              intercepted BackHandler, and applied row-reverse flex setups on
+              horizontal category carousels."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Technical Specifications & Architecture -->
+    <section class="tech-specs-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Technical Specifications & Architecture"
+          data-he="מפרט טכנולוגי וארכיטקטורה"
+        >
+          Technical Specifications & Architecture
+        </h2>
+        <div class="specs-table">
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Core Framework"
+              data-he="סביבת ליבה ומובייל"
+              >Core Framework</span
+            >
+            <span class="spec-val"
+              >React Native with Expo SDK & Expo Router</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Local Persistence"
+              data-he="אחסון וניהול נתונים"
+              >Local Persistence</span
+            >
+            <span class="spec-val"
+              >AsyncStorage Client Engine (100% Offline, Zero Cloud
+              Dependency)</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="File & Document Engine"
+              data-he="עיבוד קבצים ומסמכים"
+              >File & Document Engine</span
+            >
+            <span class="spec-val"
+              >xlsx Bulk Ingestion, Expo-Print, Expo-Sharing & FileSystem
+              API</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="UI & Localization Stack"
+              data-he="ממשק משתמש ולוקליזציה"
+              >UI & Localization Stack</span
+            >
+            <span class="spec-val"
+              >Strict RTL Parity (he-IL), Feather Vector Icons, Custom Alert
+              Modals</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="content-wrapper">
+        <p
+          data-en="TripDiary • Built with React Native & AI Workflows"
+          data-he="TripDiary • פותח באמצעות React Native וכלי בינה מלאכותית"
+        >
+          TripDiary • Built with React Native & AI Workflows
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bilingual Toggle & Infinite Carousel Script -->
+    <script>
+      // 1. Always open at the top
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+
+      const toggleBtn = document.getElementById("lang-toggle");
+      const leftBtn = document.getElementById("carousel-left");
+      const rightBtn = document.getElementById("carousel-right");
+      const track = document.getElementById("carousel-track");
+      const dotsContainer = document.getElementById("carousel-dots");
+      const cards = track ? track.querySelectorAll(".carousel-card") : [];
+
+      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, cards.length - getVisibleCount());
+      }
+
+      function updateCarousel() {
+        if (!track || !cards.length) return;
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const isRtl = document.documentElement.dir === "rtl";
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.gap) || 24;
+        const step = cardWidth + gap;
+
+        const shift = isRtl ? (currentIndex * step) : (-currentIndex * step);
+        track.style.transform = `translateX(${shift}px)`;
+
+        updateDots();
+      }
+
+      function renderDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = "";
+        const maxIdx = getMaxIndex();
+        for (let i = 0; i <= maxIdx; i++) {
+          const dot = document.createElement("div");
+          dot.className = `carousel-dot ${i === currentIndex ? "active" : ""}`;
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateDots() {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll(".carousel-dot");
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function moveLeft() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        } else {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        }
+        updateCarousel();
+      }
+
+      function moveRight() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        } else {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        }
+        updateCarousel();
+      }
+
+      if (leftBtn) leftBtn.addEventListener("click", moveLeft);
+      if (rightBtn) rightBtn.addEventListener("click", moveRight);
+
+      window.addEventListener("resize", () => {
+        renderDots();
+        updateCarousel();
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem("site_lang", lang);
+        const isHebrew = lang === "he";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
+        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+
+        // Keep left arrow pointing left (‹), right arrow pointing right (›) always
+        if (leftBtn) leftBtn.innerHTML = "&#8249;";
+        if (rightBtn) rightBtn.innerHTML = "&#8250;";
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
+          if (text) el.innerHTML = text;
+        });
+
+        currentIndex = 0;
+        renderDots();
+        updateCarousel();
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          setLanguage(currentLang === "en" ? "he" : "en");
+        });
+      }
+
+      setLanguage(currentLang);
+    </script>
+  </body>
+</html>
