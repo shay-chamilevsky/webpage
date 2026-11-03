@@ -53,11 +53,57 @@ html[lang="he"] body {
   font-size: 0.95rem;
   color: var(--arcade-muted);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .portfolio-back:hover {
   color: var(--arcade-green);
+}
+
+.back-text-short {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .app-nav {
+    padding: 0.65rem 1rem;
+  }
+  .portfolio-back {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--arcade-muted);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.28rem 0.65rem;
+    border-radius: 9999px;
+    white-space: nowrap;
+    opacity: 0.9;
+  }
+  .portfolio-back:hover {
+    background: rgba(0, 255, 102, 0.1);
+    border-color: rgba(0, 255, 102, 0.3);
+  }
+  .back-text-full {
+    display: none;
+  }
+  .back-text-short {
+    display: inline;
+  }
+  .nav-brand {
+    font-size: 1.05rem;
+    gap: 0.35rem;
+  }
+  .app-nav-logo {
+    width: 26px;
+    height: 26px;
+  }
+  .lang-switch-btn {
+    padding: 0.28rem 0.65rem;
+    font-size: 0.8rem;
+  }
 }
 
 .nav-brand {
@@ -365,11 +411,17 @@ html[lang="he"] body {
 
 .carousel-outer-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
   max-width: 1140px;
   margin-inline: auto;
+  padding-inline: 3.5rem;
   direction: ltr !important;
+  margin-top: 2rem;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 1.5rem 0;
 }
 
 [dir="rtl"] .carousel-viewport {
@@ -378,12 +430,6 @@ html[lang="he"] body {
 
 [dir="ltr"] .carousel-viewport {
   direction: ltr;
-}
-
-.carousel-viewport {
-  overflow: hidden;
-  width: 100%;
-  padding: 1.5rem 0;
 }
 
 .carousel-track {
@@ -396,6 +442,7 @@ html[lang="he"] body {
   flex: 0 0 calc((100% - 3rem) / 3);
   min-width: 260px;
   display: flex;
+  box-sizing: border-box;
 }
 
 .carousel-card-item .game-card {
@@ -443,6 +490,9 @@ html[lang="he"] body {
 }
 
 .carousel-arrow-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
   background: var(--arcade-surface);
   border: 1px solid var(--arcade-border);
   color: var(--arcade-green);
@@ -463,15 +513,53 @@ html[lang="he"] body {
   background: var(--arcade-green);
   color: #030704;
   box-shadow: 0 0 15px var(--arcade-green);
-  transform: scale(1.08);
+  transform: translateY(-50%) scale(1.08);
 }
 
 .carousel-arrow-btn.prev-btn {
-  margin-right: 0.85rem;
+  left: 0 !important;
+  right: auto !important;
+  margin: 0;
 }
 
 .carousel-arrow-btn.next-btn {
-  margin-left: 0.85rem;
+  right: 0 !important;
+  left: auto !important;
+  margin: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+[dir="rtl"] .carousel-dots,
+html[dir="rtl"] .carousel-dots {
+  direction: rtl !important;
+  flex-direction: row !important;
+}
+
+[dir="ltr"] .carousel-dots,
+html[dir="ltr"] .carousel-dots {
+  direction: ltr !important;
+  flex-direction: row !important;
+}
+
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 9999px;
+  background: rgba(0, 255, 102, 0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.carousel-dot.active {
+  width: 26px;
+  background: var(--arcade-green);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.6);
 }
 
 /* Tech Specs Table */
@@ -548,8 +636,88 @@ html[lang="he"] body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
+  .carousel-outer-wrapper {
+    padding-inline: 0 !important;
+    gap: 0 !important;
+  }
+  .carousel-viewport {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .carousel-track {
+    gap: 1rem;
+  }
   .carousel-card-item {
     flex: 0 0 100%;
+    min-width: 0 !important;
+    max-width: 100%;
   }
+  .carousel-arrow-btn {
+    display: none !important;
+  }
+  .carousel-dots {
+    margin-top: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Fixed Floating Language Switcher Pill (Matching Index)
+   ========================================================================== */
+
+/* Fixed Floating Language Switcher Pill */
+.floating-lang-pill {
+  position: fixed;
+  bottom: 24px;
+  right: 24px !important;
+  left: auto !important;
+  z-index: 99999;
+  pointer-events: auto !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 1.15rem;
+  background: rgba(14, 18, 27, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  color: #f1f5f9;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 2px 8px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              background-color 0.2s ease,
+              box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.floating-lang-pill * {
+  pointer-events: none;
+}
+
+.floating-lang-pill:hover {
+  transform: translateY(-2px);
+  background: rgba(22, 28, 42, 0.98);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.7), 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+.floating-lang-pill:active {
+  transform: translateY(0);
+}
+
+.floating-lang-pill svg {
+  flex-shrink: 0;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.floating-lang-pill:hover svg {
+  opacity: 1;
+  transform: rotate(15deg);
 }

@@ -19,15 +19,15 @@
         <a
           href="../index.html"
           class="portfolio-back"
-          data-en="&larr; Back to Portfolio"
-          data-he="&rarr; חזרה לקורות החיים"
-          >&larr; Back to Portfolio</a
+          aria-label="Back to Portfolio"
         >
+          <span class="back-text-full" data-en="&larr; Back to Portfolio" data-he="&rarr; חזרה לקורות החיים">&larr; Back to Portfolio</span>
+          <span class="back-text-short" data-en="&larr; Portfolio" data-he="&rarr; קורות חיים">&larr; Portfolio</span>
+        </a>
         <div class="nav-brand">
           <img src="../assets/images/tripdiary/icon.png" alt="TripDiary Logo" class="app-nav-logo" />
           <span class="brand-name">TripDiary</span>
         </div>
-        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
       </div>
     </header>
 
@@ -35,12 +35,6 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-text">
-          <span
-            class="tagline-pill"
-            data-en="🌍 100% Offline Travel Companion"
-            data-he="🌍 אפליקציית טיולים עצמאית 100% באופליין"
-            >🌍 100% Offline Travel Companion</span
-          >
           <h1
             class="hero-headline"
             data-en="Zero Roaming Stress.<br><span class='highlight'>Pure Mountain Precision.</span>"
@@ -566,6 +560,15 @@
     </footer>
 
     <!-- Bilingual Toggle & Infinite Carousel Script -->
+        <!-- Fixed Floating Language Switcher Pill -->
+    <button id="lang-toggle" class="floating-lang-pill" aria-label="Toggle language between English and Hebrew">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span id="lang-btn-text">עברית</span>
+    </button>
     <script>
       // 1. Always open at the top
       if ('scrollRestoration' in history) {
@@ -575,17 +578,23 @@
       window.addEventListener('load', () => window.scrollTo(0, 0));
 
       const toggleBtn = document.getElementById("lang-toggle");
+      const langText = document.getElementById("lang-btn-text");
       const leftBtn = document.getElementById("carousel-left");
       const rightBtn = document.getElementById("carousel-right");
       const track = document.getElementById("carousel-track");
       const dotsContainer = document.getElementById("carousel-dots");
       const cards = track ? track.querySelectorAll(".carousel-card") : [];
 
-      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentLang = "en";
+      try {
+        currentLang = localStorage.getItem("site_lang") || "en";
+      } catch (e) {
+        currentLang = "en";
+      }
       let currentIndex = 0;
 
       function getVisibleCount() {
-        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 640) return 1;
         if (window.innerWidth <= 900) return 2;
         return 3;
       }
@@ -660,6 +669,27 @@
       if (leftBtn) leftBtn.addEventListener("click", moveLeft);
       if (rightBtn) rightBtn.addEventListener("click", moveRight);
 
+      if (track) {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        track.addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        track.addEventListener("touchend", (e) => {
+          const deltaX = e.changedTouches[0].clientX - touchStartX;
+          const deltaY = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            const isRtl = document.documentElement.dir === "rtl";
+            if (deltaX < 0) {
+              if (isRtl) moveLeft(); else moveRight();
+            } else {
+              if (isRtl) moveRight(); else moveLeft();
+            }
+          }
+        }, { passive: true });
+      }
+
       window.addEventListener("resize", () => {
         renderDots();
         updateCarousel();
@@ -667,11 +697,15 @@
 
       function setLanguage(lang) {
         currentLang = lang;
-        localStorage.setItem("site_lang", lang);
+        try { localStorage.setItem("site_lang", lang); } catch (e) {}
         const isHebrew = lang === "he";
         document.documentElement.lang = lang;
         document.documentElement.dir = isHebrew ? "rtl" : "ltr";
-        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+        if (langText) {
+          langText.textContent = isHebrew ? "English" : "עברית";
+        } else if (toggleBtn) {
+          toggleBtn.textContent = isHebrew ? "English" : "עברית";
+        }
 
         // Keep left arrow pointing left (‹), right arrow pointing right (›) always
         if (leftBtn) leftBtn.innerHTML = "&#8249;";

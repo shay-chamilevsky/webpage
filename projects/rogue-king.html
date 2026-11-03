@@ -19,15 +19,15 @@
         <a
           href="../index.html"
           class="portfolio-back"
-          data-en="&larr; Back to Portfolio"
-          data-he="&rarr; חזרה לקורות החיים"
-          >&larr; Back to Portfolio</a
+          aria-label="Back to Portfolio"
         >
+          <span class="back-text-full" data-en="&larr; Back to Portfolio" data-he="&rarr; חזרה לקורות החיים">&larr; Back to Portfolio</span>
+          <span class="back-text-short" data-en="&larr; Portfolio" data-he="&rarr; קורות חיים">&larr; Portfolio</span>
+        </a>
         <div class="nav-brand">
           <img src="../assets/images/rogue-king/icon.png" alt="ROGUE KING Logo" class="app-nav-logo" />
           <span class="brand-title">ROGUE KING</span>
         </div>
-        <button id="lang-toggle" class="lang-switch-btn">עברית</button>
       </div>
     </header>
 
@@ -50,12 +50,6 @@
     <section class="hero">
       <div class="hero-container">
         <div class="hero-text">
-          <span
-            class="tagline-pill"
-            data-en="♟️ Tactical Chess • Deck-Building • JavaScript Engine"
-            data-he="♟️ שחמט טקטי • בניית חפיסות • מנוע JavaScript"
-            >♟️ Tactical Chess • Deck-Building • JavaScript Engine</span
-          >
           <h1
             class="hero-headline"
             data-en="Classic Chess.<br><span class='highlight'>Rogue Mechanics.</span>"
@@ -355,6 +349,8 @@
           >
             &rarr;
           </button>
+
+          <div class="carousel-dots" id="carousel-dots"></div>
         </div>
       </div>
     </section>
@@ -527,6 +523,15 @@
     </footer>
 
     <!-- Bilingual Switcher & Screens Carousel Script -->
+        <!-- Fixed Floating Language Switcher Pill -->
+    <button id="lang-toggle" class="floating-lang-pill" aria-label="Toggle language between English and Hebrew">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span id="lang-btn-text">עברית</span>
+    </button>
     <script>
       // 1. Always open at the top
       if ('scrollRestoration' in history) {
@@ -538,14 +543,21 @@
       const track = document.getElementById("carousel-track");
       const prevBtn = document.getElementById("carousel-prev");
       const nextBtn = document.getElementById("carousel-next");
+      const dotsContainer = document.getElementById("carousel-dots");
       const toggleBtn = document.getElementById("lang-toggle");
+      const langText = document.getElementById("lang-btn-text");
       const cards = track ? track.querySelectorAll(".screen-card") : [];
 
-      let currentLang = localStorage.getItem("site_lang") || "en";
+      let currentLang = "en";
+      try {
+        currentLang = localStorage.getItem("site_lang") || "en";
+      } catch (e) {
+        currentLang = "en";
+      }
       let currentIndex = 0;
 
       function getVisibleCount() {
-        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 640) return 1;
         if (window.innerWidth <= 900) return 2;
         return 3;
       }
@@ -568,6 +580,31 @@
 
         const shift = isRtl ? (currentIndex * step) : (-currentIndex * step);
         track.style.transform = `translateX(${shift}px)`;
+
+        updateDots();
+      }
+
+      function renderDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = "";
+        const maxIdx = getMaxIndex();
+        for (let i = 0; i <= maxIdx; i++) {
+          const dot = document.createElement("div");
+          dot.className = `carousel-dot ${i === currentIndex ? "active" : ""}`;
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateDots() {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll(".carousel-dot");
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
       }
 
       function moveLeft() {
@@ -595,17 +632,43 @@
       if (prevBtn) prevBtn.addEventListener("click", moveLeft);
       if (nextBtn) nextBtn.addEventListener("click", moveRight);
 
+      if (track) {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        track.addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        track.addEventListener("touchend", (e) => {
+          const deltaX = e.changedTouches[0].clientX - touchStartX;
+          const deltaY = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            const isRtl = document.documentElement.dir === "rtl";
+            if (deltaX < 0) {
+              if (isRtl) moveLeft(); else moveRight();
+            } else {
+              if (isRtl) moveRight(); else moveLeft();
+            }
+          }
+        }, { passive: true });
+      }
+
       window.addEventListener("resize", () => {
+        renderDots();
         updateCarousel();
       });
 
       function setLanguage(lang) {
         currentLang = lang;
-        localStorage.setItem("site_lang", lang);
+        try { localStorage.setItem("site_lang", lang); } catch (e) {}
         const isHebrew = lang === "he";
         document.documentElement.lang = lang;
         document.documentElement.dir = isHebrew ? "rtl" : "ltr";
-        if (toggleBtn) toggleBtn.textContent = isHebrew ? "English" : "עברית";
+        if (langText) {
+          langText.textContent = isHebrew ? "English" : "עברית";
+        } else if (toggleBtn) {
+          toggleBtn.textContent = isHebrew ? "English" : "עברית";
+        }
 
         // Keep physical left arrow pointing left (←), physical right arrow pointing right (→)
         if (prevBtn) prevBtn.innerHTML = "&larr;";
@@ -617,6 +680,7 @@
         });
 
         currentIndex = 0;
+        renderDots();
         updateCarousel();
       }
 
@@ -626,6 +690,7 @@
         });
       }
 
+      renderDots();
       setLanguage(currentLang);
     </script>
   </body>
