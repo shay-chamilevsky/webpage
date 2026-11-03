@@ -1,831 +1,735 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOOMSCROLL — Satirical Demonic Social Feed & Economy Simulator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Rubik:wght@500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../assets/css/doomscroll.css" />
-  </head>
-  <body>
-    <!-- Top Navigation -->
-    <header class="app-nav">
-      <div class="nav-wrapper">
-        <a
-          href="../index.html"
-          class="portfolio-back"
-          aria-label="Back to Portfolio"
-        >
-          <span class="back-text-full" data-en="&larr; Back to Portfolio" data-he="&rarr; חזרה לקורות החיים">&larr; Back to Portfolio</span>
-          <span class="back-text-short" data-en="&larr; Portfolio" data-he="&rarr; קורות חיים">&larr; Portfolio</span>
-        </a>
-        <div class="nav-brand">
-          <img src="../assets/images/doomscroll/icon.png" alt="DOOMSCROLL Logo" class="app-nav-logo" />
-          <span class="brand-title">DOOMSCROLL</span>
-        </div>
-      </div>
-    </header>
-
-    <!-- 1. Hero Section -->
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-text">
-          <h1
-            class="hero-headline"
-            data-en="Scroll Into Chaos.<br><span class='highlight'>Survive the Feed.</span>"
-            data-he="לגלול לתוך הכאוס.<br><span class='highlight'>לשרוד את הפיד.</span>"
-          >
-            Scroll Into Chaos.<br /><span class="highlight"
-              >Survive the Feed.</span
-            >
-          </h1>
-          <p
-            class="hero-sub"
-            data-en="A satirical demonic social network mobile game built with React Native and Expo SDK 57. Weaponizing infinite scroll addiction psychology, dopamine reward loops, 10 upgradeable dark patterns, and calibrated pity jackpot cadences."
-            data-he="משחק מובייל סאטירי המדמה רשת חברתית דמונית, בנוי ב-React Native ו-Expo SDK 57. רותם את הפסיכולוגיה של הגלילה האינסופית, מעגלי תגמול דופמין, 10 מנגנוני Dark Patterns לשדרוג ועקומת Pity מכוילת לזכיות ג'קפוט."
-          >
-            A satirical demonic social network mobile game built with React Native
-            and Expo SDK 57. Weaponizing infinite scroll addiction psychology,
-            dopamine reward loops, 10 upgradeable dark patterns, and calibrated
-            pity jackpot cadences.
-          </p>
-
-          <div class="cta-buttons">
-            <a
-              href="https://expo.dev"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-doom-primary"
-            >
-              <span class="btn-icon">📱</span>
-              <div class="btn-label-group">
-                <span
-                  class="btn-small"
-                  data-en="Live Experience"
-                  data-he="התנסות חיה"
-                  >Live Experience</span
-                >
-                <span class="btn-main">Expo Go</span>
-              </div>
-            </a>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-doom-secondary"
-            >
-              <span class="btn-icon">📦</span>
-              <div class="btn-label-group">
-                <span class="btn-small" data-en="Source Code" data-he="קוד מקור"
-                  >Source Code</span
-                >
-                <span class="btn-main">GitHub Repo</span>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Phone Chassis for Feed Mockup -->
-        <div class="hero-phone-wrapper">
-          <div class="phone-frame">
-            <img
-              src="../assets/images/doomscroll/screen-feed.jpg"
-              alt="DOOMSCROLL Demonic Feed"
-              class="phone-screen"
-              onerror="
-                this.src =
-                  'https://placehold.co/360x780/1a0907/f97316?text=DOOMSCROLL+FEED'
-              "
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 2. Behind The Product (Story) -->
-    <section class="story-section">
-      <div class="content-wrapper">
-        <h2
-          class="section-heading"
-          data-en="Behind The Product"
-          data-he="מאחורי המוצר"
-        >
-          Behind The Product
-        </h2>
-        <div class="story-cards">
-          <div class="story-card">
-            <span class="story-badge" data-en="The Challenge" data-he="האתגר"
-              >The Challenge</span
-            >
-            <h3
-              data-en="The Psychology of The Infinite Scroll"
-              data-he="פסיכולוגיית הגלילה האינסופית"
-            >
-              The Psychology of The Infinite Scroll
-            </h3>
-            <p
-              data-en="Social media applications exploit variable reward schedules and micro-dopamine triggers to hook attention. The design goal was reverse-engineering these exact psychological hooks into an engaging, satirical incremental mobile game."
-              data-he="אפליקציות חברתיות רותמות מרווחי תגמול משתנים וטריגרים של מיקרו-דופמין לכבילת הקשב. האתגר התכנוני היה הנדסה לאחור של מנגנונים אלו לכדי משחק מובייל סאטירי, עמוק וממכר."
-            >
-              Social media applications exploit variable reward schedules and
-              micro-dopamine triggers to hook attention. The design goal was
-              reverse-engineering these exact psychological hooks into an engaging,
-              satirical incremental mobile game.
-            </p>
-          </div>
-
-          <div class="story-card">
-            <span
-              class="story-badge"
-              data-en="Product Solution"
-              data-he="הפתרון המוצרי"
-              >Product Solution</span
-            >
-            <h3
-              data-en="Gamified Dark Pattern Simulator"
-              data-he="סימולטור סאטירי של אלגוריתמי התמכרות"
-            >
-              Gamified Dark Pattern Simulator
-            </h3>
-            <p
-              data-en="A dual-loop mobile architecture: an active high-frequency feed powered by 60 FPS FlashList rendering, paired with an incremental management economy where players upgrade demonic edicts, telemetry, and dark pattern switches."
-              data-he="ארכיטקטורה דו-שכבתית: פיד גלילה מהיר ב-60 FPS מבוסס FlashList, לצד כלכלת ניהול אינקרמנטלית שבה השחקן מנהל את הרשת החברתית של השאול, קוצר נשמות ומשדרג מפסקי Dark Patterns מרושעים."
-            >
-              A dual-loop mobile architecture: an active high-frequency feed
-              powered by 60 FPS FlashList rendering, paired with an incremental
-              management economy where players upgrade demonic edicts, telemetry,
-              and dark pattern switches.
-            </p>
-          </div>
-
-          <div class="story-card">
-            <span
-              class="story-badge"
-              data-en="Core Differentiator"
-              data-he="הערך המרכזי"
-              >Core Differentiator</span
-            >
-            <h3
-              data-en="Calibrated Pity & Retention Mathematics"
-              data-he="כלכלת נשמות ומודל הסתברותי מכויל"
-            >
-              Calibrated Pity & Retention Mathematics
-            </h3>
-            <p
-              data-en="Deterministic balance balancing soul drop odds, Viral Hype multiplier streaks, guaranteed pity jackpots every 65-75 scrolls, and an offline Void Attrition engine that protects long-term engagement."
-              data-he="איזון מתמטי דטרמיניסטי המשלב סיכויי נפילת נשמות, רצפי מכפילי Viral Hype, מנגנון Pity המבטיח ג'קפוט בכל 65–75 גלילות, ומנוע שחיקה פסיבי השומר על מתח המשחק באופליין."
-            >
-              Deterministic balance balancing soul drop odds, Viral Hype
-              multiplier streaks, guaranteed pity jackpots every 65-75 scrolls,
-              and an offline Void Attrition engine that protects long-term
-              engagement.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3. Screen Showcase (Carousel - 7 items, 3 visible on desktop) -->
-    <section class="screens-section">
-      <div class="content-wrapper">
-        <h2
-          class="section-heading"
-          data-en="Game Screen Showcase"
-          data-he="מסכי המשחק"
-        >
-          Game Screen Showcase
-        </h2>
-        <p
-          class="section-sub"
-          data-en="Swipe through the 7 core demonic systems engineered for satirical mobile engagement:"
-          data-he="גללו בין שבע המערכות שפותחו לחוויית גיימינג ממכרת וסאטירית:"
-        >
-          Swipe through the 7 core demonic systems engineered for satirical mobile
-          engagement:
-        </p>
-
-        <div class="screens-carousel-wrapper">
-          <button
-            class="carousel-nav-btn prev"
-            id="carousel-prev"
-            aria-label="Previous Screen"
-          >
-            &larr;
-          </button>
-
-          <div class="screens-carousel-viewport">
-            <div class="screens-carousel-track" id="carousel-track">
-              <!-- Screen 1: Algorithmic Feed -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/screen-feed.jpg"
-                    alt="Algorithmic Demonic Feed"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/f97316?text=Feed+Engine'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="1. Algorithmic Demonic Feed"
-                  data-he="1. פיד אלגוריתמי דמוני"
-                >
-                  1. Algorithmic Demonic Feed
-                </h4>
-                <p
-                  data-en="60 FPS virtualized feed (FlashList) with demonic posts, verified influencers, near-miss glitches, and calibrated soul drop payouts."
-                  data-he="פיד וירטואלי מהיר ב-60 FPS (FlashList) עם שדים מאומתים, משפיעני גיהנום, אפקטי Near-Miss וחלוקת נשמות הסתברותית."
-                >
-                  60 FPS virtualized feed (FlashList) with demonic posts, verified
-                  influencers, near-miss glitches, and calibrated soul drop payouts.
-                </p>
-              </div>
-
-              <!-- Screen 2: Machina Satanica Terminal -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/screen-terminal.jpg"
-                    alt="Machina Satanica Algorithm Terminal"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/ea580c?text=Terminal'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="2. Machina Satanica (Terminal)"
-                  data-he="2. טרמינל אלגוריתמי ו-Dark Patterns"
-                >
-                  2. Machina Satanica (Terminal)
-                </h4>
-                <p
-                  data-en="Algorithm edict upgrades (Tier 1 to 5), Addiction Steam-Gauge telemetry, and 10 psychological exploit switches like Phantom Tremors haptics."
-                  data-he="שדרוג דרגות האלגוריתם (רמות 1–5), מד התמכרות Steam-Gauge ומפסקים פסיכולוגיים כגון רטט מדמה דופמין (Phantom Tremors)."
-                >
-                  Algorithm edict upgrades (Tier 1 to 5), Addiction Steam-Gauge
-                  telemetry, and 10 psychological exploit switches like Phantom
-                  Tremors haptics.
-                </p>
-              </div>
-
-              <!-- Screen 3: Tabula Demoniac Agency -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/screen-agency.jpg"
-                    alt="Tabula Demoniac Talent Agency"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/a855f7?text=Talent+Agency'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="3. Tabula Demoniac (Agency)"
-                  data-he="3. סוכנות כישרונות שדים"
-                >
-                  3. Tabula Demoniac (Agency)
-                </h4>
-                <p
-                  data-en="Sign 30 distinct demons into active covenants across Abyssal Void, Corporate Office, and Suburban misery sets to boost decay resistance."
-                  data-he="החתמת 30 שדים ייחודיים בבריתות פעילות (חלל תהומי, סיר לחץ משרדי ופרברים) להעלאת עמידות בפני שחיקת נשמות פסיבית."
-                >
-                  Sign 30 distinct demons into active covenants across Abyssal Void,
-                  Corporate Office, and Suburban misery sets to boost decay
-                  resistance.
-                </p>
-              </div>
-
-              <!-- Screen 4: Liber Casualitas Ledger -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/screen-metrics.jpg"
-                    alt="Liber Casualitas Global Casualty Ledger"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/f59e0b?text=Casualty+Ledger'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="4. Liber Casualitas (Ledger)"
-                  data-he="4. ספר הנפגעים והטלמטריה"
-                >
-                  4. Liber Casualitas (Ledger)
-                </h4>
-                <p
-                  data-en="Live global telemetry: % human sanity eradicated, demographic target progress, offline void attrition rate, and Tier EV mathematical balancing."
-                  data-he="טלמטריה חיה: אחוזי שחיקת שפיות אנושית, קצב שחיקה באופליין (-85%/hr), תוחלת מתמטית EV ומעקב אחר ג'קפוטים שהופעלו."
-                >
-                  Live global telemetry: % human sanity eradicated, demographic
-                  target progress, offline void attrition rate, and Tier EV
-                  mathematical balancing.
-                </p>
-              </div>
-
-              <!-- Screen 5: Prestige & Covenants -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/screen-prestige.jpg"
-                    alt="Prestige & Covenants"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/ef4444?text=Prestige'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="5. Prestige & Covenants"
-                  data-he="5. איפוס יוקרה וכישרונות נצחיים"
-                >
-                  5. Prestige & Covenants
-                </h4>
-                <p
-                  data-en="Unlock demographic phases (Desperate Renters, Sleep-Deprived Parents) and invest Addiction Shards into permanent talents: Infernal Dividend and Clickbait Injection."
-                  data-he="התרחבות לשלבי אוכלוסייה חדשים (שוכרים נואשים, הורים טרוטי שינה) והשקעת Addiction Shards בשדרוגים קבועים כמו דיבידנד תופתי וזריקת קליקבייט."
-                >
-                  Unlock demographic phases (Desperate Renters, Sleep-Deprived
-                  Parents) and invest Addiction Shards into permanent talents:
-                  Infernal Dividend and Clickbait Injection.
-                </p>
-              </div>
-
-              <!-- Screen 6: In-Feed Casino -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/cazino.jpg"
-                    alt="In-Feed Casino Mini-Games"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/eab308?text=Casino+Reel'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="6. In-Feed Casino & Mini-Games"
-                  data-he="6. מיני-משחקי קזינו והימורי פיד"
-                >
-                  6. In-Feed Casino & Mini-Games
-                </h4>
-                <p
-                  data-en="Sponsored predatory reels hosted by Pit Boss Mephisto Jack, offering 25–100 soul wagers with 10x payouts and live dopamine tickers."
-                  data-he="רילים ממומנים עם פיט-בוס מפיסטו ג'ק, הימורי נשמות (25–100 נשמות) עם מכפילי פי 10 וטיקר תגובות מתמכרות בזמן אמת."
-                >
-                  Sponsored predatory reels hosted by Pit Boss Mephisto Jack,
-                  offering 25–100 soul wagers with 10x payouts and live dopamine tickers.
-                </p>
-              </div>
-
-              <!-- Screen 7: Faustian Contracts -->
-              <div class="carousel-item">
-                <div class="phone-frame mini">
-                  <img
-                    src="../assets/images/doomscroll/contract.jpg"
-                    alt="Faustian Covenant Contracts"
-                    class="phone-screen"
-                    onerror="
-                      this.src =
-                        'https://placehold.co/240x490/180a08/dc2626?text=Faustian+Contract'
-                    "
-                  />
-                </div>
-                <h4
-                  data-en="7. Faustian Covenant Contracts"
-                  data-he="7. חוזי נשמות ועסקאות שטן"
-                >
-                  7. Faustian Covenant Contracts
-                </h4>
-                <p
-                  data-en="High-tier demon pact modals delivering game-altering passive buffs (+10 souls on hype streaks) and Void Attrition shields against offline decay."
-                  data-he="חוזי שדים ייחודיים המעניקים אפקטים פסיביים רבי-עוצמה (+10 נשמות בזמן רצף) והגנה מפני שחיקת נשמות פסיבית בזמן שהאפליקציה סגורה."
-                >
-                  High-tier demon pact modals delivering game-altering passive buffs
-                  (+10 souls on hype streaks) and Void Attrition shields against offline decay.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <button
-            class="carousel-nav-btn next"
-            id="carousel-next"
-            aria-label="Next Screen"
-          >
-            &rarr;
-          </button>
-
-          <div class="carousel-dots" id="carousel-dots"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Deep Dive: Mathematical Balancing & Economy -->
-    <section class="story-section">
-      <div class="content-wrapper">
-        <h2
-          class="section-heading"
-          data-en="Deep Dive: Probability & Economy"
-          data-he="צלילה לעומק: מודל מתמטי וכלכלה"
-        >
-          Deep Dive: Probability & Economy
-        </h2>
-        <p
-          class="section-sub"
-          data-en="Tuning player dopamine cycles: balancing soul consumption, roll odds, dynamic streaks, and jackpot thresholds:"
-          data-he="כיול מחזורי הדופמין של השחקן: איזון בין צריכת נשמות, סיכויי גלגול, רצפי Viral Hype ורף ג'קפוט:"
-        >
-          Tuning player dopamine cycles: balancing soul consumption, roll odds,
-          dynamic streaks, and jackpot thresholds:
-        </p>
-
-        <div class="story-cards">
-          <div class="story-card">
-            <span class="story-badge" data-en="Pity Mechanics" data-he="עקומת Pity"
-              >Pity Mechanics</span
-            >
-            <h3 data-en="65–75 Scroll Cadence" data-he="קצב גלילות לג'קפוט">
-              65–75 Scroll Cadence
-            </h3>
-            <p
-              data-en="Mathematically calibrated probability curve with soft pity scaling, engineered to trigger high-impact 1,000-Soul Legendary Royalty drops every 65 to 75 scrolls."
-              data-he="עקומה הסתברותית מכוילת עם מנגנון Soft Pity המבטיחה נפילת ג'קפוט של 1,000 נשמות (Legendary Royalty) בכל 65 עד 75 גלילות."
-            >
-              Mathematically calibrated probability curve with soft pity
-              scaling, engineered to trigger high-impact 1,000-Soul Legendary
-              Royalty drops every 65 to 75 scrolls.
-            </p>
-          </div>
-
-          <div class="story-card">
-            <span
-              class="story-badge"
-              data-en="Dynamic Multipliers"
-              data-he="מכפילים דינמיים"
-              >Dynamic Multipliers</span
-            >
-            <h3
-              data-en="Viral Hype & Pity Scaling"
-              data-he="רצפי Viral Hype ועקומת Pity"
-            >
-              Viral Hype & Pity Scaling
-            </h3>
-            <p
-              data-en="Dynamic threshold algorithm that triggers Viral Hype streaks upon consecutive high-tier drops, guaranteeing a Legendary Royalty drop at 10+ streaks alongside dry-streak pity recovery."
-              data-he="אלגוריתם סף דינמי המפעיל רצפי Viral Hype בעת נפילות איכותיות רצופות, ומבטיח נפילת ג'קפוט מלאה ברצף של 10+ גלילות לצד הגנת Pity ברצפי הפסד."
-            >
-              Dynamic threshold algorithm that triggers Viral Hype streaks upon
-              consecutive high-tier drops, guaranteeing a Legendary Royalty drop
-              at 10+ streaks alongside dry-streak pity recovery.
-            </p>
-          </div>
-
-          <div class="story-card">
-            <span
-              class="story-badge"
-              data-en="Resource Decay"
-              data-he="שחיקת משאבים"
-              >Resource Decay</span
-            >
-            <h3
-              data-en="Soul Economy & Content Decay"
-              data-he="כלכלת נשמות ושחיקת תוכן"
-            >
-              Soul Economy & Content Decay
-            </h3>
-            <p
-              data-en="Each scroll costs 1 Soul, while repetitive visual archetypes suffer Content Decay and offline absence triggers passive soul decay, maintaining tension between binging and resource survival."
-              data-he="כל גלילה עולה נשמה אחת, כאשר צריכה חוזרת של אותם ארכיטיפים גורמת לשחיקת תוכן (Decay) והיעדרות ממושכת מפעילה שחיקת נשמות פסיבית."
-            >
-              Each scroll costs 1 Soul, while repetitive visual archetypes suffer
-              Content Decay and offline absence triggers passive soul decay,
-              maintaining tension between binging and resource survival.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Technical Specifications -->
-    <section class="tech-specs-section">
-      <div class="content-wrapper">
-        <h2
-          class="section-heading"
-          data-en="Technical Architecture"
-          data-he="מפרט טכנולוגי וארכיטקטורה"
-        >
-          Technical Architecture
-        </h2>
-        <p
-          class="section-sub"
-          data-en="Engineered for high-frequency state updates and fluid 60 FPS mobile rendering:"
-          data-he="הנדסת תוכנה לעדכוני סטייט מהירים ורינדור חלק ב-60 פריימים לשנייה:"
-        >
-          Engineered for high-frequency state updates and fluid 60 FPS mobile
-          rendering:
-        </p>
-
-        <div class="specs-table">
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="Core Framework"
-              data-he="תשתית פיתוח"
-              >Core Framework</span
-            >
-            <span
-              class="spec-val"
-              data-en="React Native (Expo SDK 57) with TypeScript"
-              data-he="React Native (Expo SDK 57) בשילוב TypeScript"
-              >React Native (Expo SDK 57) with TypeScript</span
-            >
-          </div>
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="State Management"
-              data-he="ניהול מצב גלובלי"
-              >State Management</span
-            >
-            <span
-              class="spec-val"
-              data-en="Zustand with Immer middleware & custom sync reconciler"
-              data-he="Zustand בשילוב Immer לסנכרון מצב שחקן מקומי ומהיר"
-              >Zustand with Immer middleware & custom sync reconciler</span
-            >
-          </div>
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="Feed Engine"
-              data-he="מנוע רינדור הפיד"
-              >Feed Engine</span
-            >
-            <span
-              class="spec-val"
-              data-en="Shopify FlashList (recycled cells for sustained 60 FPS scroll)"
-              data-he="Shopify FlashList (מיחזור תאים לביצועי 60 FPS חלקים)"
-              >Shopify FlashList (recycled cells for sustained 60 FPS
-              scroll)</span
-            >
-          </div>
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="Gesture & Haptics"
-              data-he="מחוות ומשוב רטט"
-              >Gesture & Haptics</span
-            >
-            <span
-              class="spec-val"
-              data-en="React Native Reanimated 3, Gesture Handler, Expo Haptics"
-              data-he="React Native Reanimated 3, Gesture Handler, ו-Expo Haptics"
-              >React Native Reanimated 3, Gesture Handler, Expo Haptics</span
-            >
-          </div>
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="Audio Synthesis"
-              data-he="מנוע סאונד ורטט"
-              >Audio Synthesis</span
-            >
-            <span
-              class="spec-val"
-              data-en="Expo AV with pitch-scaled micro-dopamine audio triggers"
-              data-he="Expo AV עם שינוי גובה צליל דינמי לפי רצף זכיות"
-              >Expo AV with pitch-scaled micro-dopamine audio triggers</span
-            >
-          </div>
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="Offline Architecture"
-              data-he="פעילות באופליין"
-              >Offline Architecture</span
-            >
-            <span
-              class="spec-val"
-              data-en="Offline Void Attrition engine with local timestamp delta reconciliation"
-              data-he="מנגנון שחיקת אופליין עצמאי עם חישוב פערי זמן מקומיים"
-              >Offline Void Attrition engine with local timestamp delta
-              reconciliation</span
-            >
-          </div>
-          <div class="spec-row">
-            <span
-              class="spec-label"
-              data-en="Platform Target"
-              data-he="פלטפורמות נתמכות"
-              >Platform Target</span
-            >
-            <span
-              class="spec-val"
-              data-en="Android (EAS Build APK) & iOS"
-              data-he="Android (EAS Build APK) ו-iOS"
-              >Android (EAS Build APK) & iOS</span
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="app-footer">
-      <div class="content-wrapper">
-        <p
-          data-en="DOOMSCROLL • Satirical Demonic Social Feed & Economy Simulator"
-          data-he="DOOMSCROLL • סימולטור סאטירי של פיד דמוני וכלכלת התמכרות"
-        >
-          DOOMSCROLL • Satirical Demonic Social Feed & Economy Simulator
-        </p>
-      </div>
-    </footer>
-
-    <!-- Scripts: Bilingual Toggle & 3-Visible Screens Carousel -->
-        <!-- Fixed Floating Language Switcher Pill -->
-    <button id="lang-toggle" class="floating-lang-pill" aria-label="Toggle language between English and Hebrew">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10"></circle>
-        <line x1="2" y1="12" x2="22" y2="12"></line>
-        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-      </svg>
-      <span id="lang-btn-text">עברית</span>
-    </button>
-    <script>
-      // 1. Always open at the top
-      if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'manual';
-      }
-      window.scrollTo(0, 0);
-      window.addEventListener('load', () => window.scrollTo(0, 0));
-
-      const toggleBtn = document.getElementById("lang-toggle");
-      const langText = document.getElementById("lang-btn-text");
-      const track = document.getElementById("carousel-track");
-      const prevBtn = document.getElementById("carousel-prev");
-      const nextBtn = document.getElementById("carousel-next");
-      const dotsContainer = document.getElementById("carousel-dots");
-      const items = track ? track.querySelectorAll(".carousel-item") : [];
-
-      let currentLang = "en";
-      try {
-        currentLang = localStorage.getItem("site_lang") || "en";
-      } catch (e) {
-        currentLang = "en";
-      }
-      let currentIndex = 0;
-
-      function getVisibleCount() {
-        if (window.innerWidth <= 640) return 1;
-        if (window.innerWidth <= 900) return 2;
-        return 3;
-      }
-
-      function getMaxIndex() {
-        return Math.max(0, items.length - getVisibleCount());
-      }
-
-      function updateCarousel() {
-        if (!track || !items.length) return;
-        const maxIdx = getMaxIndex();
-        if (currentIndex > maxIdx) currentIndex = maxIdx;
-        if (currentIndex < 0) currentIndex = 0;
-
-        const trackStyle = window.getComputedStyle(track);
-        const gap = parseFloat(trackStyle.gap) || 0;
-        const itemWidth = items[0].getBoundingClientRect().width;
-        const step = itemWidth + gap;
-        const isRtl = document.documentElement.dir === "rtl";
-        const shift = isRtl ? (currentIndex * step) : (-currentIndex * step);
-        track.style.transform = `translateX(${shift}px)`;
-
-        updateDots();
-      }
-
-      function renderDots() {
-        if (!dotsContainer) return;
-        dotsContainer.innerHTML = "";
-        const maxIdx = getMaxIndex();
-        for (let i = 0; i <= maxIdx; i++) {
-          const dot = document.createElement("div");
-          dot.className = `carousel-dot ${i === currentIndex ? "active" : ""}`;
-          dot.addEventListener("click", () => {
-            currentIndex = i;
-            updateCarousel();
-          });
-          dotsContainer.appendChild(dot);
-        }
-      }
-
-      function updateDots() {
-        if (!dotsContainer) return;
-        const dots = dotsContainer.querySelectorAll(".carousel-dot");
-        dots.forEach((dot, i) => {
-          dot.classList.toggle("active", i === currentIndex);
-        });
-      }
-
-      function moveLeft() {
-        const isRtl = document.documentElement.dir === "rtl";
-        const maxIdx = getMaxIndex();
-        if (isRtl) {
-          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-        } else {
-          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
-        }
-        updateCarousel();
-      }
-
-      function moveRight() {
-        const isRtl = document.documentElement.dir === "rtl";
-        const maxIdx = getMaxIndex();
-        if (isRtl) {
-          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
-        } else {
-          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
-        }
-        updateCarousel();
-      }
-
-      if (prevBtn) prevBtn.addEventListener("click", moveLeft);
-      if (nextBtn) nextBtn.addEventListener("click", moveRight);
-
-      if (track) {
-        let touchStartX = 0;
-        let touchStartY = 0;
-        track.addEventListener("touchstart", (e) => {
-          touchStartX = e.touches[0].clientX;
-          touchStartY = e.touches[0].clientY;
-        }, { passive: true });
-        track.addEventListener("touchend", (e) => {
-          const deltaX = e.changedTouches[0].clientX - touchStartX;
-          const deltaY = e.changedTouches[0].clientY - touchStartY;
-          if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
-            const isRtl = document.documentElement.dir === "rtl";
-            if (deltaX < 0) {
-              if (isRtl) moveLeft(); else moveRight();
-            } else {
-              if (isRtl) moveRight(); else moveLeft();
-            }
-          }
-        }, { passive: true });
-      }
-
-      window.addEventListener("resize", () => {
-        renderDots();
-        updateCarousel();
-      });
-
-      function setLanguage(lang) {
-        currentLang = lang;
-        try { localStorage.setItem("site_lang", lang); } catch (e) {}
-        const isHebrew = lang === "he";
-        document.documentElement.lang = lang;
-        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
-        if (langText) {
-          langText.textContent = isHebrew ? "English" : "עברית";
-        } else if (toggleBtn) {
-          toggleBtn.textContent = isHebrew ? "English" : "עברית";
-        }
-
-        // Keep physical left arrow pointing left (←), physical right arrow pointing right (→)
-        if (prevBtn) prevBtn.innerHTML = "&#8592;";
-        if (nextBtn) nextBtn.innerHTML = "&#8594;";
-
-        document.querySelectorAll("[data-en]").forEach((el) => {
-          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
-          if (text) el.innerHTML = text;
-        });
-
-        currentIndex = 0;
-        renderDots();
-        updateCarousel();
-      }
-
-      if (toggleBtn) {
-        toggleBtn.addEventListener("click", () => {
-          setLanguage(currentLang === "en" ? "he" : "en");
-        });
-      }
-
-      renderDots();
-      setLanguage(currentLang);
-    </script>
-  </body>
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOOMSCROLL — Satirical Demonic Social Feed & Economy Simulator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Rubik:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/doomscroll.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="app-nav">
+      <div class="nav-wrapper">
+        <a
+          href="../index.html"
+          class="portfolio-back"
+          aria-label="Back to Portfolio"
+        >
+          <span class="back-text-full" data-en="&larr; Back to Portfolio" data-he="&rarr; חזרה לקורות החיים">&larr; Back to Portfolio</span>
+          <span class="back-text-short" data-en="&larr; Portfolio" data-he="&rarr; קורות חיים">&larr; Portfolio</span>
+        </a>
+        <div class="nav-brand">
+          <img src="../assets/images/doomscroll/icon.png" alt="DOOMSCROLL Logo" class="app-nav-logo" />
+          <span class="brand-title">DOOMSCROLL</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1
+            class="hero-headline"
+            data-en="The feed always wins.<br><span class='highlight'>Turn the tables.</span>"
+            data-he="הפיד תמיד מנצח.<br><span class='highlight'>הפעם אתם מנהלים אותו.</span>"
+          >
+            The feed always wins.<br /><span class="highlight"
+              >Turn the tables.</span
+            >
+          </h1>
+          <p
+            class="hero-sub"
+            data-en="Social media feeds are designed like slot machines to keep you glued to the glass. DOOMSCROLL is a satirical mobile game where you step into the algorithm's shoes: managing a demonic feed, engineering retention traps, and balancing a ruthless soul economy."
+            data-he="רשתות חברתיות נבנו כמו מכונות מזל שנועדו להדביק אותנו למסך. DOOMSCROLL הוא משחק מובייל סאטירי ששם אתכם בצד של האלגוריתם: ניהול פיד שדים אינסופי, הפעלת מלכודות קשב ואיזון כלכלה שמתגמלת התמכרות."
+          >
+            Social media feeds are designed like slot machines to keep you glued to the glass. DOOMSCROLL is a satirical mobile game where you step into the algorithm's shoes: managing a demonic feed, engineering retention traps, and balancing a ruthless soul economy.
+          </p>
+
+          <div class="cta-buttons">
+            <a
+              href="https://expo.dev"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-doom-primary"
+            >
+              <span class="btn-icon">📱</span>
+              <div class="btn-label-group">
+                <span
+                  class="btn-small"
+                  data-en="Live Experience"
+                  data-he="התנסות חיה"
+                  >Live Experience</span
+                >
+                <span class="btn-main">Expo Go</span>
+              </div>
+            </a>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-doom-secondary"
+            >
+              <span class="btn-icon">📦</span>
+              <div class="btn-label-group">
+                <span class="btn-small" data-en="Source Code" data-he="קוד מקור"
+                  >Source Code</span
+                >
+                <span class="btn-main">GitHub Repo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Phone Chassis for Feed Mockup -->
+        <div class="hero-phone-wrapper">
+          <div class="phone-frame">
+            <img
+              src="../assets/images/doomscroll/screen-feed.jpg"
+              alt="DOOMSCROLL Demonic Feed"
+              class="phone-screen"
+              onerror="
+                this.src =
+                  'https://placehold.co/360x780/1a0907/f97316?text=DOOMSCROLL+FEED'
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Behind The Product (Story) -->
+    <section class="story-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Why Build a Demonic Feed?"
+          data-he="למה לבנות רשת חברתית מהגיהנום?"
+        >
+          Why Build a Demonic Feed?
+        </h2>
+        <div class="story-cards">
+          <div class="story-card">
+            <span class="story-badge" data-en="The Concept" data-he="הרעיון"
+              >The Concept</span
+            >
+            <h3
+              data-en="Deconstructing the Dopamine Loop"
+              data-he="לפרק את מנגנון ההתמכרות"
+            >
+              Deconstructing the Dopamine Loop
+            </h3>
+            <p
+              data-en="Everyone knows the feeling of losing an hour to mindless scrolling. Instead of writing another essay about screentime, I wanted to reverse-engineer the exact mechanics—variable rewards, near-misses, and fake urgency—and turn them into transparent gameplay."
+              data-he="כולנו מכירים את התחושה שבה שעה שלמה נעלמת בגלילה בלי ששמנו לב. במקום לכתוב עוד פוסט על זמן מסך, רציתי לקחת את אותם מנגנונים בדיוק – תגמול משתנה, תחושת 'כמעט זכיתי' ודחיפות מזויפת – ולהפוך אותם למשחק גלוי."
+            >
+              Everyone knows the feeling of losing an hour to mindless scrolling. Instead of writing another essay about screentime, I wanted to reverse-engineer the exact mechanics—variable rewards, near-misses, and fake urgency—and turn them into transparent gameplay.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="The Core Loop"
+              data-he="לולאת המשחק"
+              >The Core Loop</span
+            >
+            <h3
+              data-en="Fast Swipes Meet Incremental Strategy"
+              data-he="גלילה זורמת לצד ניהול כלכלי"
+            >
+              Fast Swipes Meet Incremental Strategy
+            </h3>
+            <p
+              data-en="The game combines a tactile, 60 FPS vertical feed with an idle management layer. Players scroll to harvest souls, sign pacts with different demon syndicates, and invest earnings into algorithmic upgrades that boost long-term yield."
+              data-he="המשחק משלב פיד אנכי מהיר וחלק ב-60 FPS יחד עם שכבת ניהול עמוקה. השחקנים גוללים כדי לקצור נשמות, חותמים על חוזים עם שדים מסינדיקטים שונים, ומשקיעים בשדרוגי אלגוריתם שמגדילים את התפוקה לאורך זמן."
+            >
+              The game combines a tactile, 60 FPS vertical feed with an idle management layer. Players scroll to harvest souls, sign pacts with different demon syndicates, and invest earnings into algorithmic upgrades that boost long-term yield.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Game Feel"
+              data-he="תחושת משחק"
+              >Game Feel</span
+            >
+            <h3
+              data-en="Balancing Tension and Momentum"
+              data-he="איזון בין הישרדות לקצב מהיר"
+            >
+              Balancing Tension and Momentum
+            </h3>
+            <p
+              data-en="Gains can't feel meaningful without risk. Every scroll costs a soul, offline absence slowly drains reserves, and sustaining a Viral Streak requires deliberate pacing. When a Jackpot drops, it feels earned because the system was genuinely challenging."
+              data-he="אי אפשר להרגיש סיפוק בלי סיכון אמיתי. כל גלילה עולה נשמה, היעדרות מהמשחק שוחקת את המאגרים בהדרגה, ושמירה על רצף מחייבת עקביות. כשהג'קפוט סוף סוף מגיע, התגמול מורגש באמת כי האתגר היה קיים לאורך כל הדרך."
+            >
+              Gains can't feel meaningful without risk. Every scroll costs a soul, offline absence slowly drains reserves, and sustaining a Viral Streak requires deliberate pacing. When a Jackpot drops, it feels earned because the system was genuinely challenging.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Screen Showcase (Carousel - 7 items, 3 visible on desktop) -->
+    <section class="screens-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Core Systems Breakdown"
+          data-he="איך המערכות עובדות בפועל"
+        >
+          Core Systems Breakdown
+        </h2>
+        <p
+          class="section-sub"
+          data-en="A closer look at the key modules driving the app's progression and feel:"
+          data-he="מבט מקרוב על המנגנונים המרכזיים שמניעים את המשחק והחוויה:"
+        >
+          A closer look at the key modules driving the app's progression and feel:
+        </p>
+
+        <div class="screens-carousel-wrapper">
+          <button
+            class="carousel-nav-btn prev"
+            id="carousel-prev"
+            aria-label="Previous Screen"
+          >
+            &larr;
+          </button>
+
+          <div class="screens-carousel-viewport">
+            <div class="screens-carousel-track" id="carousel-track">
+              <!-- Screen 1: Algorithmic Feed -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/screen-feed.jpg"
+                    alt="Algorithmic Demonic Feed"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/f97316?text=Feed+Engine'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="1. The Infinite Feed"
+                  data-he="1. פיד הגלילה המרכזי"
+                >
+                  1. The Infinite Feed
+                </h4>
+                <p
+                  data-en="A buttery 60 FPS feed rendering demon influencers, satrical posts, and live roll results with tactile haptics on every swipe."
+                  data-he="פיד חלק ב-60 FPS המציג שדים, פוסטים סאטיריים ותוצאות קציר נשמות עם רטט מגיב בכל החלקה."
+                >
+                  A buttery 60 FPS feed rendering demon influencers, satrical posts, and live roll results with tactile haptics on every swipe.
+                </p>
+              </div>
+
+              <!-- Screen 2: Machina Satanica Terminal -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/screen-terminal.jpg"
+                    alt="Machina Satanica Algorithm Terminal"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/ea580c?text=Terminal'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="2. Algorithm Upgrades"
+                  data-he="2. שדרוגי אלגוריתם וטרמינל"
+                >
+                  2. Algorithm Upgrades
+                </h4>
+                <p
+                  data-en="Unlock higher algorithm tiers and toggle dark pattern switches that manipulate drop chances and player dopamine."
+                  data-he="שדרוג דרגות האלגוריתם והפעלת מתגים שמשפרים סיכויים ומגדילים את יעילות קציר הנשמות."
+                >
+                  Unlock higher algorithm tiers and toggle dark pattern switches that manipulate drop chances and player dopamine.
+                </p>
+              </div>
+
+              <!-- Screen 3: Tabula Demoniac Agency -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/screen-agency.jpg"
+                    alt="Tabula Demoniac Talent Agency"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/a855f7?text=Talent+Agency'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="3. The Demon Roster"
+                  data-he="3. מאגר השדים והחוזים"
+                >
+                  3. The Demon Roster
+                </h4>
+                <p
+                  data-en="30 distinct demons across 6 syndicates. Signing covenants unlocks specific passives, turns dead rolls into profit, and builds offline decay resistance."
+                  data-he="30 שדים ב-6 סינדיקטים שונים. חתימה על חוזים פותחת יכולות פסיביות, הופכת גלילות ריקות לרווח ומגנה מפני שחיקה באופליין."
+                >
+                  30 distinct demons across 6 syndicates. Signing covenants unlocks specific passives, turns dead rolls into profit, and builds offline decay resistance.
+                </p>
+              </div>
+
+              <!-- Screen 4: Liber Casualitas Ledger -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/screen-metrics.jpg"
+                    alt="Liber Casualitas Global Casualty Ledger"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/f59e0b?text=Casualty+Ledger'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="4. Live Metrics & Decay"
+                  data-he="4. לוח בקרה ושחיקה"
+                >
+                  4. Live Metrics & Decay
+                </h4>
+                <p
+                  data-en="Clear telemetry tracking your net offline drain rate, current decay shield percentage, total scrolls, and jackpot history in one place."
+                  data-he="לוח מעקב מסודר המציג את קצב השחיקה באופליין, אחוזי ההגנה הפעילים, כמות הגלילות והיסטוריית הזכיות."
+                >
+                  Clear telemetry tracking your net offline drain rate, current decay shield percentage, total scrolls, and jackpot history in one place.
+                </p>
+              </div>
+
+              <!-- Screen 5: Prestige & Covenants -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/screen-prestige.jpg"
+                    alt="Prestige & Covenants"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/ef4444?text=Prestige'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="5. Prestige Reset System"
+                  data-he="5. מערכת איפוס ויוקרה (Prestige)"
+                >
+                  5. Prestige Reset System
+                </h4>
+                <p
+                  data-en="Reset current soul progress to unlock higher demographic targets and invest permanent Addiction Shards into game-wide multipliers."
+                  data-he="איפוס התקדמות הנשמות תמורת מעבר לפלחי אוכלוסייה רחבים יותר והשקעת רסיסי התמכרות במכפילים קבועים שלא נמחקים."
+                >
+                  Reset current soul progress to unlock higher demographic targets and invest permanent Addiction Shards into game-wide multipliers.
+                </p>
+              </div>
+
+              <!-- Screen 6: In-Feed Casino -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/cazino.jpg"
+                    alt="In-Feed Casino Mini-Games"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/eab308?text=Casino+Reel'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="6. High-Stakes Mini-Games"
+                  data-he="6. מיני-משחקים והימורי פיד"
+                >
+                  6. High-Stakes Mini-Games
+                </h4>
+                <p
+                  data-en="Sponsored commercial breaks pop up mid-feed, offering quick dice rolls and risk-reward wagers to multiply your current balance."
+                  data-he="הפסקות חסות שצצות במהלך הגלילה ומציעות הטלת קוביות מהירה והימורי נשמות מחושבים להכפלת המאגר."
+                >
+                  Sponsored commercial breaks pop up mid-feed, offering quick dice rolls and risk-reward wagers to multiply your current balance.
+                </p>
+              </div>
+
+              <!-- Screen 7: Faustian Contracts -->
+              <div class="carousel-item">
+                <div class="phone-frame mini">
+                  <img
+                    src="../assets/images/doomscroll/contract.jpg"
+                    alt="Faustian Covenant Contracts"
+                    class="phone-screen"
+                    onerror="
+                      this.src =
+                        'https://placehold.co/240x490/180a08/dc2626?text=Faustian+Contract'
+                    "
+                  />
+                </div>
+                <h4
+                  data-en="7. Deal Confirmation Flow"
+                  data-he="7. חתימה על חוזים ואפקטים"
+                >
+                  7. Deal Confirmation Flow
+                </h4>
+                <p
+                  data-en="A dedicated deal modal hosted by the Mephisto broker. Confirms cost and mechanical perks before stamping a wax-seal impact on screen."
+                  data-he="חלון אישור עסקה בהנחיית מפיסטו. מציג בצורה שקופה את עלות החוזה והיתרון הפסיבי לפני החתימה והפעלת האפקט."
+                >
+                  A dedicated deal modal hosted by the Mephisto broker. Confirms cost and mechanical perks before stamping a wax-seal impact on screen.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-nav-btn next"
+            id="carousel-next"
+            aria-label="Next Screen"
+          >
+            &rarr;
+          </button>
+
+          <div class="carousel-dots" id="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Deep Dive: Real Battles & Product Decisions -->
+    <section class="story-section" style="background: var(--nb-bg, #120807)">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="Real Engineering & Balance Battles"
+          data-he="אתגרי פיתוח ואיזון אמיתיים"
+        >
+          Real Engineering & Balance Battles
+        </h2>
+        <div class="story-cards">
+          <div class="story-card">
+            <span class="story-badge" data-en="Economy Balance" data-he="איזון מתמטי"
+              >Economy Balance</span
+            >
+            <h3 data-en="Killing the Infinite Streak Loop" data-he="לשבור את מעגל הרצף האינסופי">
+              Killing the Infinite Streak Loop
+            </h3>
+            <p
+              data-en="Early testing revealed a nasty feedback loop: streak multipliers increased soul payouts, which immediately qualified the very next roll as a 'Viral Spike'. Streaks became effortless. We stripped streak multipliers from qualification checks and anchored thresholds to rolling averages so high streaks stay genuinely rare."
+              data-he="בבדיקות מוקדמות גילינו לולאה ששברה את המשחק: מכפיל הרצף הגדיל את הרווח, והרווח המוגדל עבר אוטומטית את הרף של הגלילה הבאה. שחקנים הגיעו לרצף 10 בקלות. ניתקנו את המכפיל מתנאי המעבר וחישבנו סף דינמי לפי ממוצע גלילות אמיתי כדי להחזיר את האתגר."
+            >
+              Early testing revealed a nasty feedback loop: streak multipliers increased soul payouts, which immediately qualified the very next roll as a 'Viral Spike'. Streaks became effortless. We stripped streak multipliers from qualification checks and anchored thresholds to rolling averages so high streaks stay genuinely rare.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="Mobile Gestures"
+              data-he="חוויית מגע במובייל"
+              >Mobile Gestures</span
+            >
+            <h3
+              data-en="The Frozen Feed Mystery"
+              data-he="למה הפיד נתקע אחרי חלונות קופצים"
+            >
+              The Frozen Feed Mystery
+            </h3>
+            <p
+              data-en="After closing contract dialogs, vertical swiping would randomly lock up. React Native's native `<Modal>` was creating secondary native windows that orphaned the feed's PanResponder. We migrated all dialogs to absolute in-tree overlays, keeping touch responders intact without dropping frames."
+              data-he="אחרי סגירת חלונות אישור חוזה, הגלילה בפיד פשוט קפאה. רכיב ה-Modal המובנה של React Native יצר חלון נפרד שניתק את מאזיני המגע של הפיד. החלפנו את כל המודאלים בשכבות Overlay פנימיות באותו עץ רנדור, מה שפתר את התקיעות ושמר על מגע חלק."
+            >
+              After closing contract dialogs, vertical swiping would randomly lock up. React Native's native `<Modal>` was creating secondary native windows that orphaned the feed's PanResponder. We migrated all dialogs to absolute in-tree overlays, keeping touch responders intact without dropping frames.
+            </p>
+          </div>
+
+          <div class="story-card">
+            <span
+              class="story-badge"
+              data-en="UX Transparency"
+              data-he="שימושיות ושקיפות"
+              >UX Transparency</span
+            >
+            <h3
+              data-en="Replacing Mystery Stats with Clear Decay"
+              data-he="להחליף נתונים מעורפלים במספרים ברורים"
+            >
+              Replacing Mystery Stats with Clear Decay
+            </h3>
+            <p
+              data-en="The ledger originally featured vague flavor numbers like 'Attention Harvested', leaving players in the dark about offline losses. We replaced it with a direct Offline Decay card showing exact drain rates and current protection percentages, giving covenant upgrades tangible value."
+              data-he="מסך הבקרה הציג במקור נתונים מעורפלים כמו 'זמן קשב שנלכד', והשחקן לא ידע מה קורה לנשמות שלו כשהמשחק סגור. החלפנו את הכרטיס במד שחיקת אופליין ברור שמציג קצב אובדן מדויק ואחוזי עמידות, מה שהפך כל שד חתום לבעל ערך מוחשי."
+            >
+              The ledger originally featured vague flavor numbers like 'Attention Harvested', leaving players in the dark about offline losses. We replaced it with a direct Offline Decay card showing exact drain rates and current protection percentages, giving covenant upgrades tangible value.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Technical Specifications -->
+    <section class="tech-specs-section">
+      <div class="content-wrapper">
+        <h2
+          class="section-heading"
+          data-en="The Technical Stack"
+          data-he="המפרט הטכני של האפליקציה"
+        >
+          The Technical Stack
+        </h2>
+        <div class="specs-table">
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Core Framework"
+              data-he="סביבת פיתוח"
+              >Core Framework</span
+            >
+            <span class="spec-val">React Native • Expo SDK 57 • TypeScript</span>
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Feed Engine"
+              data-he="מנוע רינדור הפיד"
+              >Feed Engine</span
+            >
+            <span class="spec-val"
+              >Shopify FlashList (Recycled views tuned for 60 FPS vertical scrolling)</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="State & Economy"
+              data-he="ניהול מצב וכלכלה"
+              >State & Economy</span
+            >
+            <span class="spec-val"
+              >Zustand with Immer (Atomic updates & local offline persistence)</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Gestures & Motion"
+              data-he="מחוות ואנימציה"
+              >Gestures & Motion</span
+            >
+            <span class="spec-val"
+              >React Native Gesture Handler • Reanimated 3 • Expo Haptics</span
+            >
+          </div>
+          <div class="spec-row">
+            <span
+              class="spec-label"
+              data-en="Offline System"
+              data-he="מערכת אופליין"
+              >Offline System</span
+            >
+            <span class="spec-val"
+              >Deterministic timestamp reconciliation with passive decay mitigation</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="content-wrapper">
+        <p
+          data-en="DOOMSCROLL • Satirical Demonic Social Feed & Economy Simulator"
+          data-he="DOOMSCROLL • סימולטור סאטירי של פיד דמוני וכלכלת התמכרות"
+        >
+          DOOMSCROLL • Satirical Demonic Social Feed & Economy Simulator
+        </p>
+      </div>
+    </footer>
+
+    <!-- Fixed Floating Language Switcher Pill -->
+    <button id="lang-toggle" class="floating-lang-pill" aria-label="Toggle language between English and Hebrew">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="2" y1="12" x2="22" y2="12"></line>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+      </svg>
+      <span id="lang-btn-text">עברית</span>
+    </button>
+
+    <script>
+      // 1. Always open at the top
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      window.scrollTo(0, 0);
+      window.addEventListener('load', () => window.scrollTo(0, 0));
+
+      const toggleBtn = document.getElementById("lang-toggle");
+      const langText = document.getElementById("lang-btn-text");
+      const track = document.getElementById("carousel-track");
+      const prevBtn = document.getElementById("carousel-prev");
+      const nextBtn = document.getElementById("carousel-next");
+      const dotsContainer = document.getElementById("carousel-dots");
+      const items = track ? track.querySelectorAll(".carousel-item") : [];
+
+      let currentLang = "en";
+      try {
+        currentLang = localStorage.getItem("site_lang") || "en";
+      } catch (e) {
+        currentLang = "en";
+      }
+      let currentIndex = 0;
+
+      function getVisibleCount() {
+        if (window.innerWidth <= 640) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function getMaxIndex() {
+        return Math.max(0, items.length - getVisibleCount());
+      }
+
+      function updateCarousel() {
+        if (!track || !items.length) return;
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+
+        const trackStyle = window.getComputedStyle(track);
+        const gap = parseFloat(trackStyle.gap) || 0;
+        const itemWidth = items[0].getBoundingClientRect().width;
+        const step = itemWidth + gap;
+        const isRtl = document.documentElement.dir === "rtl";
+        const shift = isRtl ? (currentIndex * step) : (-currentIndex * step);
+        track.style.transform = `translateX(${shift}px)`;
+
+        updateDots();
+      }
+
+      function renderDots() {
+        if (!dotsContainer) return;
+        dotsContainer.innerHTML = "";
+        const maxIdx = getMaxIndex();
+        for (let i = 0; i <= maxIdx; i++) {
+          const dot = document.createElement("div");
+          dot.className = `carousel-dot ${i === currentIndex ? "active" : ""}`;
+          dot.addEventListener("click", () => {
+            currentIndex = i;
+            updateCarousel();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateDots() {
+        if (!dotsContainer) return;
+        const dots = dotsContainer.querySelectorAll(".carousel-dot");
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === currentIndex);
+        });
+      }
+
+      function moveLeft() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        } else {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        }
+        updateCarousel();
+      }
+
+      function moveRight() {
+        const isRtl = document.documentElement.dir === "rtl";
+        const maxIdx = getMaxIndex();
+        if (isRtl) {
+          currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+        } else {
+          currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+        }
+        updateCarousel();
+      }
+
+      if (prevBtn) prevBtn.addEventListener("click", moveLeft);
+      if (nextBtn) nextBtn.addEventListener("click", moveRight);
+
+      if (track) {
+        let touchStartX = 0;
+        let touchStartY = 0;
+        track.addEventListener("touchstart", (e) => {
+          touchStartX = e.touches[0].clientX;
+          touchStartY = e.touches[0].clientY;
+        }, { passive: true });
+        track.addEventListener("touchend", (e) => {
+          const deltaX = e.changedTouches[0].clientX - touchStartX;
+          const deltaY = e.changedTouches[0].clientY - touchStartY;
+          if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
+            const isRtl = document.documentElement.dir === "rtl";
+            if (deltaX < 0) {
+              if (isRtl) moveLeft(); else moveRight();
+            } else {
+              if (isRtl) moveRight(); else moveLeft();
+            }
+          }
+        }, { passive: true });
+      }
+
+      window.addEventListener("resize", () => {
+        renderDots();
+        updateCarousel();
+      });
+
+      function setLanguage(lang) {
+        currentLang = lang;
+        try { localStorage.setItem("site_lang", lang); } catch (e) {}
+        const isHebrew = lang === "he";
+        document.documentElement.lang = lang;
+        document.documentElement.dir = isHebrew ? "rtl" : "ltr";
+        if (langText) {
+          langText.textContent = isHebrew ? "English" : "עברית";
+        } else if (toggleBtn) {
+          toggleBtn.textContent = isHebrew ? "English" : "עברית";
+        }
+
+        if (prevBtn) prevBtn.innerHTML = "&#8592;";
+        if (nextBtn) nextBtn.innerHTML = "&#8594;";
+
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          const text = el.getAttribute(isHebrew ? "data-he" : "data-en");
+          if (text) el.innerHTML = text;
+        });
+
+        currentIndex = 0;
+        renderDots();
+        updateCarousel();
+      }
+
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          setLanguage(currentLang === "en" ? "he" : "en");
+        });
+      }
+
+      renderDots();
+      setLanguage(currentLang);
+    </script>
+  </body>
 </html>
