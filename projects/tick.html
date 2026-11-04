@@ -163,6 +163,7 @@
           How It Actually Works
         </h2>
         <p
+          class="section-subheading"
           data-en="Every screen was refined through user testing to remove ambiguity and cut friction:"
           data-he="כל מסך נבנה ונבדק מול משתמשים כדי למנוע בלבול ולחסוך לחיצות מיותרות:"
         >
@@ -194,7 +195,8 @@
                     "
                   />
                 </div>
-                <h4
+                <div class="slide-caption-card">
+<h4
                   data-en="1. The Main Dashboard"
                   data-he="1. מסך הבית והמעקבים"
                 >
@@ -206,6 +208,7 @@
                 >
                   Your active habits at a glance. Shows current streaks, freeze protection icons, and the last 10 days of progress without burying stats in menus.
                 </p>
+                </div>
               </div>
 
               <!-- Screen 2 -->
@@ -221,7 +224,8 @@
                     "
                   />
                 </div>
-                <h4
+                <div class="slide-caption-card">
+<h4
                   data-en="2. Simple Tracker Setup"
                   data-he="2. יצירת מעקב מותאם אישית"
                 >
@@ -233,6 +237,7 @@
                 >
                   Choose whether you are building a positive routine or limiting a bad one. Customize frequencies, daily limits, and target units in a single form.
                 </p>
+                </div>
               </div>
 
               <!-- Screen 3 -->
@@ -248,7 +253,8 @@
                     "
                   />
                 </div>
-                <h4
+                <div class="slide-caption-card">
+<h4
                   data-en="3. History & Calendar Heatmap"
                   data-he="3. לוח שנה ומעקב היסטורי"
                 >
@@ -260,6 +266,7 @@
                 >
                   An interactive monthly grid. Color intensity reflects effort: darker green shows heavier activity, while soft red tracks boundaries kept or broken.
                 </p>
+                </div>
               </div>
 
               <!-- Screen 4 -->
@@ -275,7 +282,8 @@
                     "
                   />
                 </div>
-                <h4
+                <div class="slide-caption-card">
+<h4
                   data-en="4. Sidebar & Instant Switching"
                   data-he="4. תפריט צד ושליטה מהירה"
                 >
@@ -287,6 +295,7 @@
                 >
                   Jump between trackers quickly, toggle between Dark, Light, or System themes, and flip the entire interface between Hebrew (RTL) and English (LTR).
                 </p>
+                </div>
               </div>
 
               <!-- Screen 5 -->
@@ -302,7 +311,8 @@
                     "
                   />
                 </div>
-                <h4
+                <div class="slide-caption-card">
+<h4
                   data-en="5. Full-Screen Goal Celebration"
                   data-he="5. מסך סיום וחגיגת יעד"
                 >
@@ -314,6 +324,7 @@
                 >
                   Meeting a tough target deserves real recognition. A bold, high-contrast modal confirms your success without annoying ads or forced shares.
                 </p>
+                </div>
               </div>
             </div>
           </div>
@@ -506,12 +517,16 @@
       const langText = document.getElementById("lang-btn-text");
       const slides = track ? track.querySelectorAll(".carousel-slide") : [];
 
-      let currentLang = "en";
-      try {
-        currentLang = localStorage.getItem("site_lang") || "en";
-      } catch (e) {
-        currentLang = "en";
+      function getInitialLang() {
+        try {
+          const saved = localStorage.getItem("site_lang");
+          if (saved === "he" || saved === "en") return saved;
+        } catch (e) {}
+        const browserLang = (typeof navigator !== "undefined" && (navigator.language || navigator.userLanguage) || "").toLowerCase();
+        return browserLang.startsWith("he") ? "he" : "en";
       }
+
+      let currentLang = getInitialLang();
       let currentIndex = 0;
 
       function getVisibleCount() {
@@ -597,11 +612,10 @@
           const deltaX = e.changedTouches[0].clientX - touchStartX;
           const deltaY = e.changedTouches[0].clientY - touchStartY;
           if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
-            const isRtl = document.documentElement.dir === "rtl";
             if (deltaX < 0) {
-              if (isRtl) moveLeft(); else moveRight();
+              moveRight();
             } else {
-              if (isRtl) moveRight(); else moveLeft();
+              moveLeft();
             }
           }
         }, { passive: true });

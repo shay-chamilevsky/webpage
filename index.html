@@ -39,19 +39,9 @@
       <section id="hero" class="section hero-section">
         <div class="container">
           <div class="hero-box">
-            <div class="hero-eyebrow">
-              <span data-en="PRODUCT STRATEGY • RAPID PROTOTYPING • SYSTEM ARCHITECTURE • AI-ASSISTED BUILDS" data-he="אסטרטגיית מוצר • פרוטוטייפינג מהיר • ארכיטקטורת מערכות • פיתוח מבוסס AI">
-                PRODUCT STRATEGY • RAPID PROTOTYPING • SYSTEM ARCHITECTURE • AI-ASSISTED BUILDS
-              </span>
-            </div>
-
             <h1 class="hero-name" data-en="Shay Chamilevsky" data-he="שי חמילבסקי">
               Shay Chamilevsky
             </h1>
-
-            <div class="hero-role-title" data-en="Product Builder & Technologist" data-he="בונה מוצרים דיגיטליים וטכנולוגיה">
-              Product Builder & Technologist
-            </div>
 
             <p
               class="hero-bio"
@@ -531,12 +521,6 @@
             <h2 data-en="Let's Connect & Build" data-he="בואו נדבר וניצור ביחד">
               Let's Connect & Build
             </h2>
-            <p
-              data-en="Open to product, engineering, and builder opportunities—from 0-to-1 prototyping to Product Management and Technical PM roles. If you're building something ambitious or need someone who moves fast from idea to working software, let's talk."
-              data-he="פתוח לתפקידי מוצר, טכנולוגיה וחדשנות—החל מפרוטוטייפינג 0-ל-1 ועד ניהול מוצר (PM / Technical PM). אם אתם בונים משהו משמעותי או מחפשים מישהו שלוקח רעיון לקוד עובד במהירות—בואו נדבר."
-            >
-              Open to product, engineering, and builder opportunities—from 0-to-1 prototyping to Product Management and Technical PM roles. If you're building something ambitious or need someone who moves fast from idea to working software, let's talk.
-            </p>
 
             <div class="contact-links-grid">
               <a
@@ -603,12 +587,16 @@
     <script>
       const toggleBtn = document.getElementById("lang-toggle");
       const langText = document.getElementById("lang-btn-text");
-      let currentLang = "en";
-      try {
-        currentLang = localStorage.getItem("site_lang") || "en";
-      } catch (e) {
-        currentLang = "en";
+      function getInitialLang() {
+        try {
+          const saved = localStorage.getItem("site_lang");
+          if (saved === "he" || saved === "en") return saved;
+        } catch (e) {}
+        const browserLang = (typeof navigator !== "undefined" && (navigator.language || navigator.userLanguage) || "").toLowerCase();
+        return browserLang.startsWith("he") ? "he" : "en";
       }
+
+      let currentLang = getInitialLang();
 
       function setLanguage(lang) {
         currentLang = lang;

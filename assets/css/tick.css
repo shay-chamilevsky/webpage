@@ -13,6 +13,7 @@
   --nb-shadow: 5px 5px 0px var(--nb-black);
   --nb-shadow-lg: 8px 8px 0px var(--nb-black);
   --nb-shadow-hover: 2px 2px 0px var(--nb-black);
+  --nb-dot-grid: rgba(18, 18, 18, 0.28);
 }
 
 * {
@@ -22,11 +23,16 @@
 }
 
 body {
-  background-color: var(--nb-bg);
   color: var(--nb-black);
   font-family: "Plus Jakarta Sans", system-ui, sans-serif;
   line-height: 1.5;
-  background-image: radial-gradient(var(--nb-black) 1px, transparent 1px);
+}
+
+body,
+.hero,
+.screens-section {
+  background-color: var(--nb-bg, #fffbf0);
+  background-image: radial-gradient(var(--nb-dot-grid, rgba(18, 18, 18, 0.28)) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -286,9 +292,11 @@ html[lang="he"] body {
 .phone-frame.mini {
   width: 240px;
   height: 490px;
+  background: #ffffff;
+  border: var(--nb-border);
+  box-shadow: var(--nb-shadow);
   border-radius: 20px;
   padding: 8px;
-  box-shadow: var(--nb-shadow);
   transform: none;
 }
 
@@ -298,7 +306,8 @@ html[lang="he"] body {
   object-fit: cover;
   border: var(--nb-border-sm);
   border-radius: 18px;
-  background: #fff;
+  background: #ffffff;
+  display: block;
 }
 
 .phone-frame.mini .phone-screen {
@@ -501,6 +510,7 @@ html[lang="he"] body {
 }
 .carousel-track {
   display: flex;
+  align-items: stretch;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .carousel-slide {
@@ -688,4 +698,83 @@ html[dir="ltr"] .carousel-dots {
 .floating-lang-pill:hover svg {
   opacity: 1;
   transform: rotate(15deg);
+}
+
+
+
+/* ==========================================================================
+   Neo-Brutalist Isolated Text Cards (Carousel Section - Unified Height)
+   ========================================================================== */
+.slide-caption-card {
+  background: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  padding: 1.15rem 1.25rem;
+  border-radius: 0px;
+  margin-top: 1.25rem;
+  text-align: center;
+  width: 100%;
+  max-width: 270px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  min-height: 215px;
+  position: relative;
+  z-index: 2;
+}
+
+[dir="rtl"] .slide-caption-card,
+html[dir="rtl"] .slide-caption-card {
+  text-align: center;
+}
+
+.slide-caption-card h4,
+.carousel-slide h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.slide-caption-card p,
+.carousel-slide p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1f2937;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Ensure Carousel Controls & Dots Layer Above Dot Grid */
+.carousel-container {
+  position: relative;
+  z-index: 2;
+}
+
+.carousel-nav-btn {
+  z-index: 10 !important;
+}
+
+.carousel-dots {
+  position: relative;
+  z-index: 10 !important;
+}
+
+.carousel-dot {
+  position: relative;
+  z-index: 10 !important;
+}
+
+.section-subheading {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #374151;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
 }

@@ -531,12 +531,16 @@
       const langText = document.getElementById("lang-btn-text");
       const cards = track ? track.querySelectorAll(".screen-card") : [];
 
-      let currentLang = "en";
-      try {
-        currentLang = localStorage.getItem("site_lang") || "en";
-      } catch (e) {
-        currentLang = "en";
+      function getInitialLang() {
+        try {
+          const saved = localStorage.getItem("site_lang");
+          if (saved === "he" || saved === "en") return saved;
+        } catch (e) {}
+        const browserLang = (typeof navigator !== "undefined" && (navigator.language || navigator.userLanguage) || "").toLowerCase();
+        return browserLang.startsWith("he") ? "he" : "en";
       }
+
+      let currentLang = getInitialLang();
       let currentIndex = 0;
 
       function getVisibleCount() {
@@ -626,11 +630,10 @@
           const deltaX = e.changedTouches[0].clientX - touchStartX;
           const deltaY = e.changedTouches[0].clientY - touchStartY;
           if (Math.abs(deltaX) > 40 && Math.abs(deltaX) > Math.abs(deltaY)) {
-            const isRtl = document.documentElement.dir === "rtl";
             if (deltaX < 0) {
-              if (isRtl) moveLeft(); else moveRight();
+              moveRight();
             } else {
-              if (isRtl) moveRight(); else moveLeft();
+              moveLeft();
             }
           }
         }, { passive: true });
